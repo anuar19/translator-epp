@@ -105,6 +105,6 @@ def update_json_file_for_fijian(input_file, output_folder):
     print(f"Total Fijian translations inserted: {translations_done}")
 
 # Example usage:
-json_file = 'translated_files\employers-portal-configuration-id-fil.json'
+json_file = 'translated_files\candidates-portal-configuration-id-fil.json'
 output_folder = 'translated_files'
 update_json_file_for_fijian(json_file, output_folder)

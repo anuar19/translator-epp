@@ -105,6 +105,6 @@ def update_json_file_for_indonesian(input_file, output_folder):
     print(f"Total Indonesian translations inserted: {translations_done}")
 
 # Example usage:
-json_file = 'language_files\generic-popups-configuration.json'
+json_file = 'language_files\employers-portal-configuration.json'
 output_folder = 'translated_files'
 update_json_file_for_indonesian(json_file, output_folder)

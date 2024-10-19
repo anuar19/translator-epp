@@ -1,0 +1,2846 @@
+{
+    "pages": [
+        {
+            "pageId": "myVacancies",
+            "facets": [
+                {
+                    "id": "RECENCY",
+                    "labels": {
+                        "en-us": "Date posted",
+                        "ms-my": "Tarikh diiklankan",
+                        "id-id": "Tanggal diposting",
+                        "fil-ph": "Petsa ng pag post",
+                        "fj-fj": "Tikinisiga a biu kina"
+                    },
+                    "options": {
+                        "TODAY": {
+                            "en-us": "Since yesterday",
+                            "ms-my": "Sejak semalam",
+                            "id-id": "Sejak kemarin",
+                            "fil-ph": "Simula kahapon",
+                            "fj-fj": "Me tekivu mai na Noa"
+                        },
+                        "3DAYSAGO": {
+                            "en-us": "Last 3 days",
+                            "ms-my": "3 hari lepas",
+                            "id-id": "3 hari terakhir",
+                            "fil-ph": "Huling 3 araw",
+                            "fj-fj": "3 na siga sa oti"
+                        },
+                        "THIS_WEEK": {
+                            "en-us": "Last week",
+                            "ms-my": "Minggu lepas",
+                            "id-id": "Minggu lalu",
+                            "fil-ph": "Noong nakaraang linggo",
+                            "fj-fj": "Macawa sa oti"
+                        },
+                        "2WEEKSAGO": {
+                            "en-us": "Last 2 weeks",
+                            "ms-my": "2 minggu lepas",
+                            "id-id": "2 minggu terakhir",
+                            "fil-ph": "Huling 2 linggo",
+                            "fj-fj": "2 na macawa sa oti"
+                        },
+                        "THIS_MONTH": {
+                            "en-us": "Last month",
+                            "ms-my": "Bulan lepas",
+                            "id-id": "Bulan lalu",
+                            "fil-ph": "Noong nakaraang buwan",
+                            "fj-fj": "Ena vula sa oti"
+                        }
+                    }
+                },
+                {
+                    "id": "STATUS",
+                    "labels": {
+                        "en-us": "Status",
+                        "ms-my": "Status",
+                        "id-id": "Keadaan",
+                        "fil-ph": "Katayuan",
+                        "fj-fj": "iTuvaki"
+                    },
+                    "options": {
+                        "Active": {
+                            "en-us": "Active vacancies",
+                            "ms-my": "Aktif",
+                            "id-id": "Lowongan aktif",
+                            "fil-ph": "Mga aktibong bakanteng trabaho",
+                            "fj-fj": "Vanua lala bulabula"
+                        },
+                        "Inactive": {
+                            "en-us": "Inactive vacancies",
+                            "ms-my": "Tidak Aktif",
+                            "id-id": "Lowongan tidak aktif",
+                            "fil-ph": "Hindi aktibong mga bakanteng trabaho",
+                            "fj-fj": "Vanua lala sega ni vakayagataki"
+                        },
+                        "Upcoming": {
+                            "en-us": "Upcoming vacancies",
+                            "ms-my": "Akan Datang",
+                            "id-id": "Lowongan yang akan datang",
+                            "fil-ph": "Mga paparating na bakanteng trabaho",
+                            "fj-fj": "Vanua lala e tarava"
+                        }
+                    }
+                },
+                {
+                    "id": "CONTRACT_TYPE",
+                    "labels": {
+                        "en-us": "Contract type",
+                        "ms-my": "Status Pekerjaan",
+                        "id-id": "Jenis kontrak",
+                        "fil-ph": "Uri ng kontrata",
+                        "fj-fj": "Mataqali konitaraki"
+                    },
+                    "taxonomyId": "contract_type"
+                },
+                {
+                    "id": "HOURS",
+                    "labels": {
+                        "en-us": "Hours per week",
+                        "ms-my": "Waktu Bekerja",
+                        "id-id": "Jam per minggu",
+                        "fil-ph": "Mga oras bawat linggo",
+                        "fj-fj": "Auwa ena dua na macawa"
+                    },
+                    "taxonomyId": "work_hours"
+                },
+                {
+                    "id": "YEARS_OF_WORKING_EXPERIENCE",
+                    "labels": {
+                        "en-us": "Working experience",
+                        "ms-my": "Pengalaman bekerja",
+                        "id-id": "Pengalaman kerja",
+                        "fil-ph": "Karanasan sa pagtatrabaho",
+                        "fj-fj": "Veika e sotavi ena cakacaka"
+                    },
+                    "taxonomyId": "years-of-working-experience-range"
+                },
+                {
+                    "id": "SECTOR",
+                    "labels": {
+                        "en-us": "Sector name",
+                        "ms-my": "Sektor",
+                        "id-id": "Nama sektor",
+                        "fil-ph": "Pangalan ng sektor",
+                        "fj-fj": "Yaca ni tabana"
+                    },
+                    "taxonomyId": "industry"
+                },
+                {
+                    "id": "EDUCATION",
+                    "labels": {
+                        "en-us": "Education level",
+                        "ms-my": "Akademik",
+                        "id-id": "Tingkat pendidikan",
+                        "fil-ph": "Antas ng edukasyon",
+                        "fj-fj": "iVakatagedegede ni vuli"
+                    },
+                    "taxonomyId": "education_level"
+                },
+                {
+                    "id": "SALARY",
+                    "labels": {
+                        "en-us": "Salary",
+                        "ms-my": "Gaji",
+                        "id-id": "Gaji",
+                        "fil-ph": "Suweldo",
+                        "fj-fj": "iSau"
+                    },
+                    "taxonomyId": "salary_range"
+                },
+                {
+                    "id": "HIRING_INCENTIVE",
+                    "labels": {
+                        "en-us": "Job category",
+                        "ms-my": "Kategori pekerjaan",
+                        "id-id": "Kategori pekerjaan",
+                        "fil-ph": "Kategorya ng trabaho",
+                        "fj-fj": "iWasewase ni cakacaka"
+                    },
+                    "taxonomyId": "hiring-incentives"
+                }
+            ],
+            "popups": {
+                "exportApplicants": {
+                    "referenceId": "exportApplicants"
+                }
+            },
+            "sections": [
+                {
+                    "sectionId": "vacancyDetailsSummaryHeader",
+                    "fields": [
+                        {
+                            "id": "location",
+                            "dataField": "$.location",
+                            "taxonomy": "location",
+                            "dataTemplate": "{CITY}",
+                            "truncated": false
+                        }
+                    ]
+                },
+                {
+                    "sectionId": "vacancyDetailsSummary",
+                    "truncateContent": true,
+                    "fields": [
+                        {
+                            "id": "contractType",
+                            "dataField": "$.contractType",
+                            "valueType": "Taxonomy",
+                            "taxonomy": "contract_type"
+                        },
+                        {
+                            "id": "hoursPerWeek",
+                            "dataField": "$.hoursPerWeek",
+                            "valueType": "Taxonomy",
+                            "taxonomy": "work_hours"
+                        },
+                        {
+                            "id": "educationDegree",
+                            "dataField": "$.educationDegree",
+                            "valueType": "Taxonomy",
+                            "taxonomy": "education_level"
+                        },
+                        {
+                            "id": "offeredRemunerationPackages",
+                            "dataField": "$.offeredRemunerationPackages",
+                            "valueType": "Taxonomy",
+                            "taxonomy": "salary_range",
+                            "condition": {
+                                "and": [
+                                    {
+                                        "!=": [
+                                            {
+                                                "var": "displaySalary"
+                                            },
+                                            null
+                                        ]
+                                    },
+                                    {
+                                        "==": [
+                                            {
+                                                "var": "displaySalary"
+                                            },
+                                            true
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "datePosted",
+                            "dataField": "$.datePosted",
+                            "valueType": "Date"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": "vacancy",
+            "sections": [
+                {
+                    "sectionId": "vacancy",
+                    "visible": true,
+                    "labels": {
+                        "en-us": "Vacancy",
+                        "ms-my": "Jawatan Kosong",
+                        "id-id": "Vacancy",
+                        "fil-ph": "Mga bakanteng trabaho",
+                        "fj-fj": "Vanua lala"
+                    },
+                    "fields": [
+                        {
+                            "technicalId": "vacancyTitle",
+                            "id": "title",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Vacancy title",
+                                "ms-my": "Nama jawatan",
+                                "id-id": "Judul lowongan",
+                                "fil-ph": "Titulo ng bakanteng posisyon",
+                                "fj-fj": "Itutu lala"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyForeignExpatriateApplication",
+                            "id": "foreignExpatriateApplication",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Foreign/Expatriate application",
+                                "ms-my": "Permohonan Pekerja Asing/Ekspatriat",
+                                "id-id": "Aplikasi Asing/Ekspatriat",
+                                "fil-ph": "Aplikasyon sa dayuhan/Expatriate",
+                                "fj-fj": "Kerekere ni Veimatanitu/Vanuatani"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyForeignExpatriateType",
+                            "id": "foreignExpatriateType",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "dependencyConditions": {
+                                "mandatory": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyForeignExpatriateApplication"
+                                            },
+                                            null
+                                        ]
+                                    }
+                                }
+                            },
+                            "labels": {
+                                "en-us": "Please select whether this vacancy is available for foreign or expatriate workers",
+                                "ms-my": "Sila pilih kekosongan jawatan untuk warga asing atau ekspatriat",
+                                "id-id": "Silakan pilih apakah lowongan ini tersedia untuk pekerja asing atau ekspatriat",
+                                "fil-ph": "Piliin lamang kung ang bakanteng ito ay magagamit para sa mga dayuhang manggagawa o expatriate",
+                                "fj-fj": "Yalovinaka digitaka se sa tu na itutu lala oqo me baleti ira na tamata cakacaka mai na veivanua tani se vanuatani"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyForeignExpatriateReminder",
+                            "id": "foreignExpatriateReminder",
+                            "editable": false,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "The company must conduct interviews to obtain local candidates for the advertised positions. Please contact the nearest SOCSO Office for assistance.",
+                                "ms-my": "Pihak syarikat hendaklah melaksanakan temu duga mendapatkan calon tempatan bagi jawatan yang diiklankan. Sila hubungi Pejabat PERKESO berdekatan bagi urusan lanjut.",
+                                "id-id": "Perusahaan harus melakukan wawancara untuk mendapatkan kandidat lokal untuk posisi yang diiklankan. Silakan hubungi Kantor SOCSO terdekat untuk mendapatkan bantuan.",
+                                "fil-ph": "Kailangang magsagawa ng mga panayam ang kumpanya upang makakuha ng mga lokal na kandidato para sa mga na advertise na posisyon. Mangyaring makipag ugnayan sa pinakamalapit na SOCSO Office para sa tulong.",
+                                "fj-fj": "Me na vakayacora na kabani na veivakatarogi me rawati kina na tamata me baleta na itutu sa kacivaki tu. Yalovinaka veitaratara ki na valenivolavola ni SOCSO voleka duadua me baleta na veivuke."
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyOccupation",
+                            "id": "occupation",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Occupation",
+                                "ms-my": "Pekerjaan",
+                                "id-id": "Kerja",
+                                "fil-ph": "Trabaho",
+                                "fj-fj": "Cakacaka"
+                            }
+                        },
+                        {
+                            "id": "escoCode",
+                            "editable": false,
+                            "mandatory": false,
+                            "enabled": true,
+                            "labels": {
+                                "en-us": "ESCO code",
+                                "ms-my": "Kod ESCO",
+                                "id-id": "Kode ESCO",
+                                "fil-ph": "ESCO code",
+                                "fj-fj": "Nabavuni ESCO"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyOpenPositionCount",
+                            "id": "openPositionCount",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "valueType": "Number",
+                            "labels": {
+                                "en-us": "Number of Positions",
+                                "ms-my": "Jumlah kekosongan jawatan",
+                                "id-id": "Jumlah Posisi",
+                                "fil-ph": "Bilang ng mga Posisyon",
+                                "fj-fj": "iWiliwili ni Itutu"
+                            },
+                            "validation": {
+                                "rangeValidation": {
+                                    "max": {
+                                        "rule": 9999
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyNumberOfPositionsByType",
+                            "id": "numberOfPositionsByType",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "dependencyConditions": {
+                                "mandatory": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyForeignExpatriateApplication"
+                                            },
+                                            null
+                                        ]
+                                    }
+                                }
+                            },
+                            "labels": {
+                                "en-us": "Please state the number of positions required based on the categories below",
+                                "ms-my": "Sila catat bilangan jawatan yang diperlukan mengikut kategori dibawah",
+                                "id-id": "Harap sebutkan jumlah posisi yang diperlukan berdasarkan kategori di bawah ini",
+                                "fil-ph": "Mangyaring sabihin ang bilang ng mga posisyon na kinakailangan batay sa mga kategorya sa ibaba",
+                                "fj-fj": "Yalovinaka tukuna na iwiliwili ni itutu e gadrevi ka yavutaki ena iwasewase e ra"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyTitleMalay",
+                            "id": "malay",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "dependencyConditions": {
+                                "mandatory": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyForeignExpatriateApplication"
+                                            },
+                                            null
+                                        ]
+                                    }
+                                }
+                            },
+                            "labels": {
+                                "en-us": "Job title (Bahasa Malaysia)",
+                                "ms-my": "Nama jawatan (Bahasa Malaysia)",
+                                "id-id": "Jabatan jabatan (Bahasa Malaysia)",
+                                "fil-ph": "Judul kerja (Bahasa Malaysia)",
+                                "fj-fj": "Itutu ni cakacaka (Bahasa Malaysia)"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyTitleEnglish",
+                            "id": "english",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "dependencyConditions": {
+                                "mandatory": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyForeignExpatriateApplication"
+                                            },
+                                            null
+                                        ]
+                                    }
+                                }
+                            },
+                            "labels": {
+                                "en-us": "Job title (English)",
+                                "ms-my": "Nama jawatan (Bahasa Inggeris)",
+                                "id-id": "Judul pekerjaan (Bahasa Inggris)",
+                                "fil-ph": "Pamagat ng trabaho (Tagalog)",
+                                "fj-fj": "Ulutaga ni cakacaka (Vakavalagi)"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyNumberOfAlreadyHired",
+                            "id": "numberOfAlreadyHired",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "dependencyConditions": {
+                                "mandatory": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyForeignExpatriateApplication"
+                                            },
+                                            null
+                                        ]
+                                    }
+                                }
+                            },
+                            "labels": {
+                                "en-us": "Number of hiring done",
+                                "ms-my": "Bilangan pekerja yang telah dilantik",
+                                "id-id": "Jumlah perekrutan yang dilakukan",
+                                "fil-ph": "Bilang ng hiring tapos na",
+                                "fj-fj": "iWiliwili ni veivakacakacakataki e vakayacori"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyAvailableForBothSex",
+                            "id": "availableForBothSex",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "dependencyConditions": {
+                                "mandatory": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyForeignExpatriateApplication"
+                                            },
+                                            null
+                                        ]
+                                    }
+                                }
+                            },
+                            "labels": {
+                                "en-us": "Are positions available for both male and female?",
+                                "ms-my": "Adakah kekosongan jawatan ini terbuka kepada lelaki dan wanita?",
+                                "id-id": "Apakah posisi tersedia untuk pria dan wanita?",
+                                "fil-ph": "May mga posisyon ba para sa lalaki at babae?",
+                                "fj-fj": "E tiko beka na itutu me baleti ira ruarua na tagane kei na yalewa?"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyNumberOfPositionsByGender",
+                            "id": "numberOfPositionsByGender",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "dependencyConditions": {
+                                "mandatory": {
+                                    "expression": {
+                                        "===": [
+                                            {
+                                                "var": "vacancyAvailableForBothSex"
+                                            },
+                                            false
+                                        ]
+                                    }
+                                }
+                            },
+                            "labels": {
+                                "en-us": "Number of positions for",
+                                "ms-my": "Bilangan jawatan untuk",
+                                "id-id": "Jumlah posisi untuk",
+                                "fil-ph": "Bilang ng mga posisyon para sa",
+                                "fj-fj": "iWiliwili ni itutu ni"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyForeignSupportingDocument",
+                            "id": "foreignSupportingDocuments",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "vacancyMinimumValidityInDays": 14,
+                            "vacancyMaximumValidityInDays": 30,
+                            "labels": {
+                                "en-us": "Upload supporting document",
+                                "ms-my": "Muat naik dokumen sokongan",
+                                "id-id": "Unggah dokumen pendukung",
+                                "fil-ph": "Mag upload ng suportang dokumento",
+                                "fj-fj": "Vakavodoka na ivolatukutuku veitokoni"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyExperienceLevel",
+                            "id": "experienceLevel",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Position Level",
+                                "ms-my": "Taraf jawatan",
+                                "id-id": "Tingkat Posisi",
+                                "fil-ph": "Antas ng Posisyon",
+                                "fj-fj": "iVakatagedegede ni Tutu"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyYearsOfWorkingExperience",
+                            "id": "yearsOfWorkingExperience",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Working experience",
+                                "ms-my": "Pengalaman bekerja",
+                                "id-id": "Pengalaman kerja",
+                                "fil-ph": "Karanasan sa pagtatrabaho",
+                                "fj-fj": "Veika e sotavi ena cakacaka"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Select working experience",
+                                    "ms-my": "Pilih pengalaman bekerja",
+                                    "id-id": "Pilih pengalaman kerja",
+                                    "fil-ph": "Pumili ng karanasan sa pagtatrabaho",
+                                    "fj-fj": "Digitaka na veika e sotavi ena cakacaka"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyRelatedCompetencies",
+                            "id": "relatedCompetencies",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Related skills",
+                                "ms-my": "Kemahiran yang berkaitan",
+                                "id-id": "Keterampilan terkait",
+                                "fil-ph": "Mga kaugnay na kasanayan",
+                                "fj-fj": "Kila veisemati"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyEducationDegree",
+                            "id": "educationDegree",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Education level",
+                                "ms-my": "Tahap akademik",
+                                "id-id": "Tingkat pendidikan",
+                                "fil-ph": "Antas ng edukasyon",
+                                "fj-fj": "iVakatagedegede ni vuli"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Education level",
+                                    "ms-my": "Tahap akademik",
+                                    "id-id": "Tingkat pendidikan",
+                                    "fil-ph": "Antas ng edukasyon",
+                                    "fj-fj": "iVakatagedegede ni vuli"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyFieldOfStudy",
+                            "id": "fieldOfStudy",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Field of Study",
+                                "ms-my": "Bidang Akademik",
+                                "id-id": "Bidang Studi",
+                                "fil-ph": "Larangan ng Pag aaral",
+                                "fj-fj": "Vanua ni Vuli"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Select field of study",
+                                    "ms-my": "Pilih bidang akademik",
+                                    "id-id": "Pilih bidang studi",
+                                    "fil-ph": "Pumili ng larangan ng pag aaral",
+                                    "fj-fj": "Digitaka na lomanibai ni vuli"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancySectors",
+                            "id": "sectors",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Sector",
+                                "ms-my": "Sektor",
+                                "id-id": "Sektor",
+                                "fil-ph": "Sektor",
+                                "fj-fj": "Tabana"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Select one or more sectors",
+                                    "ms-my": "Pilih satu atau lebih sektor",
+                                    "id-id": "Pilih satu atau beberapa sektor",
+                                    "fil-ph": "Pumili ng isa o higit pang sektor",
+                                    "fj-fj": "Digitaka e dua se sivia na tabana"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyDescription",
+                            "id": "description",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Job description",
+                                "ms-my": "Deskripsi Jawatan",
+                                "id-id": "Deskripsi pekerjaan",
+                                "fil-ph": "Paglalarawan ng trabaho",
+                                "fj-fj": "iVakamacala ni cakacaka"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Describe the duties, requirements, and benefits of the job.",
+                                    "ms-my": "Sila terangkan tugas-tugas, keperluan, dan faedah berkaitan jawatan berkenaan.",
+                                    "id-id": "Jelaskan tugas, persyaratan, dan manfaat pekerjaan.",
+                                    "fil-ph": "Ilarawan ang mga tungkulin, kinakailangan, at benepisyo ng trabaho.",
+                                    "fj-fj": "Vakamacalataka na itavi, veika e gadrevi, kei na yaga ni cakacaka."
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyLanguages",
+                            "id": "languages",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Language",
+                                "ms-my": "Bahasa",
+                                "id-id": "Bahasa",
+                                "fil-ph": "Wika",
+                                "fj-fj": "Vosa"
+                            },
+                            "fields": [
+                                {
+                                    "technicalId": "vacancyLanguageTaxonomyNodeId",
+                                    "id": "taxonomyNodeId",
+                                    "editable": true,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "labels": {
+                                        "en-us": "Language",
+                                        "ms-my": "Bahasa",
+                                        "id-id": "Bahasa",
+                                        "fil-ph": "Wika",
+                                        "fj-fj": "Vosa"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "Language",
+                                            "ms-my": "Bahasa",
+                                            "id-id": "Bahasa",
+                                            "fil-ph": "Wika",
+                                            "fj-fj": "Vosa"
+                                        }
+                                    }
+                                },
+                                {
+                                    "technicalId": "vacancyLanguageProficiencyLevel",
+                                    "id": "proficiencyLevel",
+                                    "editable": true,
+                                    "mandatory": false,
+                                    "visible": false,
+                                    "labels": {
+                                        "en-us": "Level",
+                                        "ms-my": "Tahap",
+                                        "id-id": "Tingkat",
+                                        "fil-ph": "Antas",
+                                        "fj-fj": "iVakatagedegede"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "Level",
+                                            "ms-my": "Tahap",
+                                            "id-id": "Tingkat",
+                                            "fil-ph": "Antas",
+                                            "fj-fj": "iVakatagedegede"
+                                        }
+                                    }
+                                },
+                                {
+                                    "technicalId": "vacancyLanguageReadingSkill",
+                                    "id": "reading",
+                                    "editable": true,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "taxonomy": "language_proficiency",
+                                    "valueType": "Taxonomy",
+                                    "dataField": "$.languages[*].languageSkills[\"READING\"]",
+                                    "labels": {
+                                        "en-us": "Reading",
+                                        "ms-my": "Pembacaan",
+                                        "id-id": "Membaca",
+                                        "fil-ph": "Pagbasa",
+                                        "fj-fj": "Wiliwili"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "Select level",
+                                            "ms-my": "Pilih tahap",
+                                            "id-id": "Pilih level",
+                                            "fil-ph": "Pumili ng antas",
+                                            "fj-fj": "Digitaka na ivakatagedegede"
+                                        }
+                                    }
+                                },
+                                {
+                                    "technicalId": "vacancyLanguageSpeakingSkill",
+                                    "id": "speaking",
+                                    "editable": true,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "taxonomy": "language_proficiency",
+                                    "valueType": "Taxonomy",
+                                    "dataField": "$.languages[*].languageSkills[\"SPEAKING\"]",
+                                    "labels": {
+                                        "en-us": "Speaking",
+                                        "ms-my": "Percakapan",
+                                        "id-id": "Berbicara",
+                                        "fil-ph": "Nagsasalita",
+                                        "fj-fj": "Vosa"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "Select level",
+                                            "ms-my": "Pilih tahap",
+                                            "id-id": "Pilih level",
+                                            "fil-ph": "Pumili ng antas",
+                                            "fj-fj": "Digitaka na ivakatagedegede"
+                                        }
+                                    }
+                                },
+                                {
+                                    "technicalId": "vacancyLanguageWritingSkill",
+                                    "id": "writing",
+                                    "editable": true,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "taxonomy": "language_proficiency",
+                                    "valueType": "Taxonomy",
+                                    "dataField": "$.languages[*].languageSkills[\"WRITING\"]",
+                                    "labels": {
+                                        "en-us": "Writing",
+                                        "ms-my": "Penulisan",
+                                        "id-id": "Tulisan",
+                                        "fil-ph": "Pagsulat ng",
+                                        "fj-fj": "Volavola"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "Select level",
+                                            "ms-my": "Pilih tahap",
+                                            "id-id": "Pilih level",
+                                            "fil-ph": "Pumili ng antas",
+                                            "fj-fj": "Digitaka na ivakatagedegede"
+                                        }
+                                    }
+                                },
+                                {
+                                    "technicalId": "vacancyLanguageOtherLanguage",
+                                    "id": "otherLanguage",
+                                    "editable": true,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "labels": {
+                                        "en-us": "Other language",
+                                        "ms-my": "Bahasa lain",
+                                        "id-id": "Bahasa lain",
+                                        "fil-ph": "Iba pang wika",
+                                        "fj-fj": "Vosa tale eso"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "technicalId": "vacancyLicenses",
+                            "id": "licenses",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Drivers license",
+                                "ms-my": "Lesen memandu",
+                                "id-id": "Surat izin mengemudi",
+                                "fil-ph": "Lisensya sa pagmamaneho",
+                                "fj-fj": "Laiseni ni draiva"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Select one or more categories",
+                                    "ms-my": "Pilih satu atau lebih kategori",
+                                    "id-id": "Pilih satu atau beberapa kategori",
+                                    "fil-ph": "Pumili ng isa o higit pang mga kategorya",
+                                    "fj-fj": "Digitaka e dua se sivia na iwasewase"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyDisability",
+                            "id": "disability",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Disabilities",
+                                "ms-my": "Ketidakupayaan",
+                                "id-id": "Cacat",
+                                "fil-ph": "Mga Kapansanan",
+                                "fj-fj": "Vakaleqai tu vakayago"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "sectionId": "termsOfEmployment",
+                    "visible": true,
+                    "labels": {
+                        "en-us": "Terms of employment",
+                        "ms-my": "Terma pekerjaan",
+                        "id-id": "Ketentuan kerja",
+                        "fil-ph": "Mga tuntunin ng trabaho",
+                        "fj-fj": "iVakarau ni cakacaka"
+                    },
+                    "fields": [
+                        {
+                            "technicalId": "vacancyContractType",
+                            "id": "contractType",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Contract type",
+                                "ms-my": "Status Pekerjaan",
+                                "id-id": "Jenis kontrak",
+                                "fil-ph": "Uri ng kontrata",
+                                "fj-fj": "Mataqali konitaraki"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyHoursPerWeek",
+                            "id": "hoursPerWeek",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Hours per week",
+                                "ms-my": "Waktu Bekerja",
+                                "id-id": "Jam per minggu",
+                                "fil-ph": "Mga oras bawat linggo",
+                                "fj-fj": "Auwa ena dua na macawa"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyOfferedRemunerationPackages",
+                            "id": "offeredRemunerationPackages",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Salary",
+                                "ms-my": "Gaji",
+                                "id-id": "Gaji",
+                                "fil-ph": "Suweldo",
+                                "fj-fj": "iSau"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyActualWages",
+                            "id": "actualWages",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Actual wages (RM)",
+                                "ms-my": "Upah sebenar (RM)",
+                                "id-id": "Upah aktual (IDR)",
+                                "fil-ph": "Aktwal na sahod (PHP)",
+                                "fj-fj": "Isau dina (FJD)"
+                            },
+                            "validation": {
+                                "regEx": "^[0-9]*$",
+                                "errorMessage": {
+                                    "en-us": "Actual wages can only be whole number.",
+                                    "ms-my": "Upah sebenar hanya nombor bulat sahaja.",
+                                    "id-id": "Upah sebenarnya hanya bisa berupa bilangan bulat.",
+                                    "fil-ph": "Ang aktwal na sahod ay maaari lamang maging buong bilang.",
+                                    "fj-fj": "Na isau dina e rawa walega ni naba taucoko."
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyDisplaySalary",
+                            "id": "displaySalary",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "defaultValue": true,
+                            "labels": {
+                                "en-us": "Display salary range in jobseeker portal",
+                                "ms-my": "Paparkan julat gaji di portal",
+                                "id-id": "Tampilkan kisaran gaji di portal pencari kerja",
+                                "fil-ph": "Display salary range sa jobseeker portal",
+                                "fj-fj": "Vakaraitaka na isau ena tikina nei jobseeker"
+                            },
+                            "dependencyConditions": {
+                                "editable": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyOfferedRemunerationPackages"
+                                            },
+                                            null
+                                        ]
+                                    },
+                                    "resetValueOnConditionNotMet": true
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyNegotiableSalary",
+                            "id": "negotiableSalary",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Salary negotiable",
+                                "ms-my": "Gaji boleh dirunding",
+                                "id-id": "Gaji bisa dinegosiasikan",
+                                "fil-ph": "Suweldo negotiable",
+                                "fj-fj": "Isau e rawa ni veisautaki"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyAddressIsSameAsCompanyAddress",
+                            "id": "sameAddressAsCompany",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "The vacancy location is the same as the company address",
+                                "ms-my": "Penempatan jawatan adalah sama dengan alamat syarikat",
+                                "id-id": "Lokasi lowongan sama dengan alamat perusahaan",
+                                "fil-ph": "Ang bakanteng lokasyon ay pareho sa address ng kumpanya",
+                                "fj-fj": "Na vanua lala e tautauvata kei na itikotiko ni kabani"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyLocation",
+                            "id": "vacancyLocation",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Address",
+                                "ms-my": "Alamat",
+                                "id-id": "Alamat",
+                                "fil-ph": "Address",
+                                "fj-fj": "iTikotiko"
+                            },
+                            "dependencyConditions": {
+                                "visible": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyAddressIsSameAsCompanyAddress"
+                                            },
+                                            true
+                                        ]
+                                    }
+                                },
+                                "editable": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyAddressIsSameAsCompanyAddress"
+                                            },
+                                            true
+                                        ]
+                                    },
+                                    "resetValueOnConditionNotMet": true
+                                },
+                                "mandatory": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyAddressIsSameAsCompanyAddress"
+                                            },
+                                            null
+                                        ]
+                                    }
+                                }
+                            },
+                            "locationSubdivisions": [
+                                {
+                                    "subdivision": "STATE",
+                                    "inputType": "DROPDOWN",
+                                    "labels": {
+                                        "en-us": "State",
+                                        "ms-my": "Negeri",
+                                        "id-id": "Negara",
+                                        "fil-ph": "Estado",
+                                        "fj-fj": "Yasana"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "State",
+                                            "ms-my": "Negeri",
+                                            "id-id": "Negara",
+                                            "fil-ph": "Estado",
+                                            "fj-fj": "Yasana"
+                                        }
+                                    }
+                                },
+                                {
+                                    "subdivision": "CITY",
+                                    "inputType": "AUTOCOMPLETE",
+                                    "labels": {
+                                        "en-us": "City",
+                                        "ms-my": "Bandar",
+                                        "id-id": "Kota",
+                                        "fil-ph": "Lungsod",
+                                        "fj-fj": "Siti"
+                                    }
+                                },
+                                {
+                                    "subdivision": "POSTAL_CODE",
+                                    "inputType": "AUTOCOMPLETE",
+                                    "labels": {
+                                        "en-us": "Zip/Postal Code",
+                                        "ms-my": "Poskod",
+                                        "id-id": "Kode Pos / Pos",
+                                        "fil-ph": "Zip/Postal Code",
+                                        "fj-fj": "iVakatakilakila ni Meli/Meli"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "technicalId": "vacancyAddressLine",
+                            "id": "line",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Address",
+                                "ms-my": "Alamat",
+                                "id-id": "Alamat",
+                                "fil-ph": "Address",
+                                "fj-fj": "iTikotiko"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Enter street address…",
+                                    "ms-my": "Masukkan alamat…",
+                                    "id-id": "Masukkan alamat jalan...",
+                                    "fil-ph": "Ipasok ang address ng kalye...",
+                                    "fj-fj": "Vakacuruma na itikotiko ni gaunisala..."
+                                }
+                            },
+                            "dependencyConditions": {
+                                "visible": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyAddressIsSameAsCompanyAddress"
+                                            },
+                                            true
+                                        ]
+                                    }
+                                },
+                                "editable": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyAddressIsSameAsCompanyAddress"
+                                            },
+                                            true
+                                        ]
+                                    },
+                                    "resetValueOnConditionNotMet": true
+                                },
+                                "mandatory": {
+                                    "expression": {
+                                        "!==": [
+                                            {
+                                                "var": "vacancyAddressIsSameAsCompanyAddress"
+                                            },
+                                            null
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyStartDate",
+                            "id": "startDate",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Job start date",
+                                "ms-my": "Tarikh mula bekerja",
+                                "id-id": "Tanggal mulai pekerjaan",
+                                "fil-ph": "Petsa ng pagsisimula ng trabaho",
+                                "fj-fj": "Tikinisiga ni tekivu cakacaka"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Date",
+                                    "ms-my": "Tarikh",
+                                    "id-id": "Tanggal",
+                                    "fil-ph": "Petsa",
+                                    "fj-fj": "Tikinisiga"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyEndDate",
+                            "id": "endDate",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Job end date",
+                                "ms-my": "Tarikh akhir bekerja",
+                                "id-id": "Tanggal akhir pekerjaan",
+                                "fil-ph": "Petsa ng pagtatapos ng trabaho",
+                                "fj-fj": "Tikinisiga ni icavacava ni cakacaka"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "sectionId": "disability",
+                    "visible": false,
+                    "labels": {
+                        "en-us": "Disability",
+                        "ms-my": "DISABILITY",
+                        "id-id": "Cacat",
+                        "fil-ph": "Kapansanan",
+                        "fj-fj": "Vakaleqai Tu vakayago"
+                    }
+                },
+                {
+                    "sectionId": "hiringIncentives",
+                    "visible": true,
+                    "labels": {
+                        "en-us": "Job category",
+                        "ms-my": "Kategori pekerjaan",
+                        "id-id": "Kategori pekerjaan",
+                        "fil-ph": "Kategorya ng trabaho",
+                        "fj-fj": "iWasewase ni cakacaka"
+                    }
+                },
+                {
+                    "sectionId": "settings",
+                    "visible": true,
+                    "labels": {
+                        "en-us": "Settings",
+                        "ms-my": "Setting",
+                        "id-id": "Pengaturan",
+                        "fil-ph": "Mga Setting",
+                        "fj-fj": "iTuvatuva"
+                    },
+                    "fields": [
+                        {
+                            "technicalId": "vacancyContact",
+                            "id": "contact",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Contact",
+                                "ms-my": "Pengguna",
+                                "id-id": "Kontak",
+                                "fil-ph": "Makipag ugnay sa",
+                                "fj-fj": "Veitaratara"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Select a contact",
+                                    "ms-my": "Pilih orang untuk dihubungi",
+                                    "id-id": "Pilih kontak",
+                                    "fil-ph": "Pumili ng contact",
+                                    "fj-fj": "Digitaka e dua na veitaratara"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyShowContactPerson",
+                            "id": "showContactPerson",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Show contact information in the vacancy details view",
+                                "ms-my": "Tunjukkan maklumat perhubungan pada paparan butiran jawatan kosong",
+                                "id-id": "Tampilkan informasi kontak di tampilan detail lowongan",
+                                "fil-ph": "Ipakita ang impormasyon ng contact sa view ng mga detalye ng bakanteng trabaho",
+                                "fj-fj": "Vakaraitaka na itukutuku ni veitaratara ena mata matailalai ni vanua lala"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyHideCompanyInformation",
+                            "id": "hideCompanyInformation",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Hide confidential company information in the vacancy view",
+                                "ms-my": "Sembunyikan maklumat sulit majikan pada paparan jawatan kosong",
+                                "id-id": "Sembunyikan informasi rahasia perusahaan di tampilan lowongan",
+                                "fil-ph": "Itago ang kumpidensyal na impormasyon ng kumpanya sa bakanteng view",
+                                "fj-fj": "Vunitaka na itukutuku maroroi ni kabani ena rai lala"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyRequireResume",
+                            "id": "requireResume",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Applicant must attach a resume",
+                                "ms-my": "Pemohon harus melampirkan resume",
+                                "id-id": "Pelamar harus melampirkan resume",
+                                "fil-ph": "Kailangang maglakip ng resume ang aplikante",
+                                "fj-fj": "O koya e kerekere tiko e dodonu me vakabira e dua na itukutuku ni lesu tale"
+                            }
+                        },
+                        {
+                            "technicalId": "vacancyActivityEndDate",
+                            "id": "activityEndDate",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "vacancyMaximumValidityInDays": 30,
+                            "labels": {
+                                "en-us": "Vacancy start and end date",
+                                "ms-my": "Tarikh mula dan tamat jawatan kosong",
+                                "id-id": "Tanggal mulai dan berakhir lowongan",
+                                "fil-ph": "Petsa ng pagsisimula at pagtatapos ng bakanteng posisyon",
+                                "fj-fj": "Tikinisiga ni itekitekivu kei na tikinisiga ni icavacava"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": "employerProfile",
+            "sections": [
+                {
+                    "sectionId": "company",
+                    "visible": true,
+                    "labels": {
+                        "en-us": "Company",
+                        "ms-my": "Syarikat",
+                        "id-id": "Firma",
+                        "fil-ph": "Kumpanya",
+                        "fj-fj": "Kabani"
+                    },
+                    "fields": [
+                        {
+                            "technicalId": "companyName",
+                            "id": "name",
+                            "editable": false,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Company name",
+                                "ms-my": "Nama syarikat",
+                                "id-id": "Nama perusahaan",
+                                "fil-ph": "Pangalan ng kumpanya",
+                                "fj-fj": "Yaca ni kabani"
+                            }
+                        },
+                        {
+                            "id": "companyBanner",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Company banner",
+                                "ms-my": "Gambar atau banner syarikat",
+                                "id-id": "Spanduk perusahaan",
+                                "fil-ph": "Bandila ng kumpanya",
+                                "fj-fj": "Drotini ni kabani"
+                            },
+                            "fileUploadConfiguration": {
+                                "uploadLabel": {
+                                    "en-us": "Upload",
+                                    "ms-my": "Muat naik",
+                                    "id-id": "Unggah",
+                                    "fil-ph": "Mag-upload",
+                                    "fj-fj": "Vakavodoka"
+                                },
+                                "removeLabel": {
+                                    "en-us": "Remove",
+                                    "ms-my": "Padam",
+                                    "id-id": "Buka",
+                                    "fil-ph": "Tanggalin ang",
+                                    "fj-fj": "Kauta laivi"
+                                },
+                                "fileInformationLabel": {
+                                    "en-us": "<b>Recommended size:</b><br> 708x154 pixels<br><b>Maximum file size:</b><br> 5MB<br><b>Only .jpg and .png files<br> are supported.</b>",
+                                    "ms-my": "<b>Saiz yang disyorkan:</b><br> 708x154 pixels<br><b>Saiz fail maksimum:</b><br> 5MB<br><b>Hanya fail .jpg dan .png<br> yang disokong.</b>",
+                                    "id-id": "<b>Ukuran yang disarankan:</b><br> 708x154 piksel Ukuran<br><b>file maksimum:</b><br> 5MB<br><b>Hanya file .jpg dan .png yang<br> didukung.</b>",
+                                    "fil-ph": "<b>Inirerekumendang laki:</b><br> 708x154 pixels<br><b>Maximum na laki ng file:</b><br> 5MB<br><b>Tanging .jpg at .png file<br> ang suportado.</b>",
+                                    "fj-fj": "<b>Levu vakaturi:</b><br> 708x154 pixels<br><b>levu duadua ni faile:</b><br> 5MB<br><b>e .jpg ga kei na faile<br> .png era tokoni.</b>"
+                                },
+                                "recommendedImageDimensions": {
+                                    "height": 154,
+                                    "width": 708
+                                }
+                            }
+                        },
+                        {
+                            "id": "companyLogo",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Company logo",
+                                "ms-my": "Logo syarikat",
+                                "id-id": "Logo perusahaan",
+                                "fil-ph": "Logo ng kumpanya",
+                                "fj-fj": "itawake ni kabani"
+                            },
+                            "fileUploadConfiguration": {
+                                "uploadLabel": {
+                                    "en-us": "Upload",
+                                    "ms-my": "Muat naik",
+                                    "id-id": "Unggah",
+                                    "fil-ph": "Mag-upload",
+                                    "fj-fj": "Vakavodoka"
+                                },
+                                "removeLabel": {
+                                    "en-us": "Remove",
+                                    "ms-my": "Padam",
+                                    "id-id": "Buka",
+                                    "fil-ph": "Tanggalin ang",
+                                    "fj-fj": "Kauta laivi"
+                                },
+                                "fileInformationLabel": {
+                                    "en-us": "<b>Recommended size:</b><br> 400x400 pixels<br><b>Maximum file size:</b><br> 5MB<br><b>Only .jpg and .png files<br> are supported.</b>",
+                                    "ms-my": "<b>Saiz yang disyorkan:</b><br> 400x400 pixels<br><b>Saiz fail maksimum:</b><br> 5MB<br><b>Hanya fail .jpg dan .png<br> yang disokong.</b>",
+                                    "id-id": "<b>Ukuran yang disarankan:</b><br> 400x400 piksel Ukuran<br><b>file maksimum:</b><br> 5MB<br><b>Hanya file<br> .jpg dan .png yang didukung.</b>",
+                                    "fil-ph": "<b>Inirerekumendang laki:</b><br> 400x400 pixels<br><b>Maximum na laki ng file:</b><br> 5MB<br><b>Tanging .jpg at .png file<br> ang suportado.</b>",
+                                    "fj-fj": "<b>Levu vakaturi:</b><br> 400x400 pixels<br><b>levu duadua ni faile:</b><br> 5MB<br><b>e .jpg walega kei na faile<br> .png era tokoni.</b>"
+                                },
+                                "recommendedImageDimensions": {
+                                    "height": 400,
+                                    "width": 400
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "companyRegistrationNumber",
+                            "id": "registrationNumber",
+                            "editable": false,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Registration number (SSM)",
+                                "ms-my": "Nombor Pendaftaran (SSM)",
+                                "id-id": "Nomor registrasi (SSM)",
+                                "fil-ph": "Numero ng pagpaparehistro (SSM)",
+                                "fj-fj": "Naba ni volayaca (SSM)"
+                            }
+                        },
+                        {
+                            "technicalId": "companyLegalId",
+                            "id": "legalId",
+                            "editable": false,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "SOCSO employer code no.",
+                                "ms-my": "No. Kod majikan PERKESO",
+                                "id-id": "Kode pemberi kerja SOCSO no.",
+                                "fil-ph": "SOCSO employer code no.",
+                                "fj-fj": "Nabavuni ni itaukei ni cakacaka ni VVV nabavuni."
+                            }
+                        },
+                        {
+                            "technicalId": "companyStartOperationDate",
+                            "id": "startOperationDate",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Company start operation date",
+                                "ms-my": "Tarikh operasi syarikat dimulakan",
+                                "id-id": "Tanggal mulai operasional perusahaan",
+                                "fil-ph": "Petsa ng pagsisimula ng operasyon ng kumpanya",
+                                "fj-fj": "Tikinisiga ni cakacaka ni kabani"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Date",
+                                    "ms-my": "Tarikh",
+                                    "id-id": "Tanggal",
+                                    "fil-ph": "Petsa",
+                                    "fj-fj": "Tikinisiga"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "companySize",
+                            "id": "size",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Company Size",
+                                "ms-my": "Saiz syarikat",
+                                "id-id": "Ukuran Perusahaan",
+                                "fil-ph": "Laki ng Kumpanya",
+                                "fj-fj": "Levu ni kabani"
+                            }
+                        },
+                        {
+                            "technicalId": "companySectors",
+                            "id": "sector",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Sector",
+                                "ms-my": "Sektor",
+                                "id-id": "Sektor",
+                                "fil-ph": "Sektor",
+                                "fj-fj": "Tabana"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Select one or more sectors",
+                                    "ms-my": "Pilih satu atau lebih sektor",
+                                    "id-id": "Pilih satu atau beberapa sektor",
+                                    "fil-ph": "Pumili ng isa o higit pang sektor",
+                                    "fj-fj": "Digitaka e dua se sivia na tabana"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "companyAddressLine",
+                            "id": "line",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Address",
+                                "ms-my": "Alamat",
+                                "id-id": "Alamat",
+                                "fil-ph": "Address",
+                                "fj-fj": "iTikotiko"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Enter street address…",
+                                    "ms-my": "Masukkan alamat…",
+                                    "id-id": "Masukkan alamat jalan...",
+                                    "fil-ph": "Ipasok ang address ng kalye...",
+                                    "fj-fj": "Vakacuruma na itikotiko ni gaunisala..."
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "companyLocation",
+                            "id": "companyLocation",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "",
+                                "ms-my": ""
+                            },
+                            "locationSubdivisions": [
+                                {
+                                    "subdivision": "COUNTRY",
+                                    "inputType": "DROPDOWN",
+                                    "labels": {
+                                        "en-us": "Country",
+                                        "ms-my": "Negara",
+                                        "id-id": "Negara",
+                                        "fil-ph": "Bansa",
+                                        "fj-fj": "Vanua"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "Country",
+                                            "ms-my": "Negara",
+                                            "id-id": "Negara",
+                                            "fil-ph": "Bansa",
+                                            "fj-fj": "Vanua"
+                                        }
+                                    }
+                                },
+                                {
+                                    "subdivision": "STATE",
+                                    "inputType": "DROPDOWN",
+                                    "labels": {
+                                        "en-us": "State",
+                                        "ms-my": "Negeri",
+                                        "id-id": "Negara",
+                                        "fil-ph": "Estado",
+                                        "fj-fj": "Yasana"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "State",
+                                            "ms-my": "Negeri",
+                                            "id-id": "Negara",
+                                            "fil-ph": "Estado",
+                                            "fj-fj": "Yasana"
+                                        }
+                                    }
+                                },
+                                {
+                                    "subdivision": "CITY",
+                                    "inputType": "AUTOCOMPLETE",
+                                    "labels": {
+                                        "en-us": "City",
+                                        "ms-my": "Bandar",
+                                        "id-id": "Kota",
+                                        "fil-ph": "Lungsod",
+                                        "fj-fj": "Siti"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "City",
+                                            "ms-my": "Bandar",
+                                            "id-id": "Kota",
+                                            "fil-ph": "Lungsod",
+                                            "fj-fj": "Siti"
+                                        }
+                                    }
+                                },
+                                {
+                                    "subdivision": "POSTAL_CODE",
+                                    "inputType": "AUTOCOMPLETE",
+                                    "labels": {
+                                        "en-us": "Zip/Postal Code",
+                                        "ms-my": "Poskod",
+                                        "id-id": "Kode Pos / Pos",
+                                        "fil-ph": "Zip/Postal Code",
+                                        "fj-fj": "iVakatakilakila ni Meli/Meli"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "Zip/Postal Code",
+                                            "ms-my": "Poskod",
+                                            "id-id": "Kode Pos / Pos",
+                                            "fil-ph": "Zip/Postal Code",
+                                            "fj-fj": "iVakatakilakila ni Meli/Meli"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "technicalId": "companyDescription",
+                            "id": "description",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Company description",
+                                "ms-my": "Deskripsi syarikat",
+                                "id-id": "Deskripsi perusahaan",
+                                "fil-ph": "Paglalarawan ng kumpanya",
+                                "fj-fj": "iVakamacala ni kabani"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Describe your company’s goals, achievements, vision, perks…",
+                                    "ms-my": "Terangkan mengenai matlamat syarikat anda, pencapaian, visi, faedah-faedah…",
+                                    "id-id": "Jelaskan tujuan, pencapaian, visi, tunjangan...",
+                                    "fil-ph": "Ilarawan ang mga layunin, tagumpay, pangitain, perks ng iyong kumpanya...",
+                                    "fj-fj": "Vakamacalataka na takete ni nomu kabani, rawa ka, raivotu, vinaka ..."
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "companyYoutubeUrl",
+                            "id": "youTubeUrl",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "YouTube",
+                                "ms-my": "YouTube",
+                                "id-id": "YouTube",
+                                "fil-ph": "YouTube",
+                                "fj-fj": "YouTube"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Enter the link to your YouTube company video",
+                                    "ms-my": "Masukkan link ke video YouTube syarikat anda",
+                                    "id-id": "Masukkan link ke video perusahaan YouTube Anda",
+                                    "fil-ph": "Ipasok ang link sa iyong video ng kumpanya sa YouTube",
+                                    "fj-fj": "Vakacuruma na isema ki na nomu vidio ni kabani ni YouTube"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "companyBusinessEntity",
+                            "id": "businessEntity",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Business Entity",
+                                "ms-my": "Entiti Perniagaan",
+                                "id-id": "Badan Usaha",
+                                "fil-ph": "Entity ng Negosyo",
+                                "fj-fj": "iYaubula ni Bisinisi"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Please select business entity",
+                                    "ms-my": "Tolong pilih entiti perniagaan",
+                                    "id-id": "Silahkan pilih badan usaha",
+                                    "fil-ph": "Piliin lamang ang entity ng negosyo",
+                                    "fj-fj": "Yalovinaka digitaka na bisinisi veika vakabisinisi"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "companyBusinessType",
+                            "id": "businessType",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Business Type",
+                                "ms-my": "Jenis perniagaan",
+                                "id-id": "Jenis Bisnis",
+                                "fil-ph": "Uri ng Negosyo",
+                                "fj-fj": "Mataqali Bisinisi"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Please select business type",
+                                    "ms-my": "Tolong pilih jenis perniagaan",
+                                    "id-id": "Silakan pilih jenis bisnis",
+                                    "fil-ph": "Piliin lamang ang uri ng negosyo",
+                                    "fj-fj": "Yalovinaka digitaka na mataqali bisinisi"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "companyWebsiteUrl",
+                            "id": "websiteAddress",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Website Address",
+                                "ms-my": "Alamat Laman Sesawang",
+                                "id-id": "Alamat situs web",
+                                "fil-ph": "Website Address",
+                                "fj-fj": "iTikotiko ni Mataveilawa"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Enter the link to your company website",
+                                    "ms-my": "Masukkan pautan ke laman sesawang syarikat anda",
+                                    "id-id": "Masukkan tautan ke situs web perusahaan Anda",
+                                    "fil-ph": "Ipasok ang link sa website ng iyong kumpanya",
+                                    "fj-fj": "Vakacuruma na isema ki na nomu mataveilawa ni kabani"
+                                }
+                            }
+                        },
+                        {
+                            "technicalId": "companyHasBranches",
+                            "id": "hasBranches",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Does the company have any other branches/ subsidiaries?",
+                                "ms-my": "Adakah syarikat mempunyai cawangan / anak syarikat lain?",
+                                "id-id": "Apakah perusahaan memiliki cabang/anak perusahaan lain?",
+                                "fil-ph": "May iba pa bang branches/ subsidiary ang company",
+                                "fj-fj": "E tiko beka eso tale na tabana/kabani e tiko ena kabani oqo?"
+                            }
+                        },
+                        {
+                            "technicalId": "companyHiringWorkersWithDisabilities",
+                            "id": "hiringWorkersWithDisabilities",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Is employer interested in hiring workers with disabilities?",
+                                "ms-my": "Adakah majikan berminat untuk mengambil pekerja kurang upaya?",
+                                "id-id": "Apakah pemberi kerja tertarik untuk mempekerjakan pekerja penyandang disabilitas?",
+                                "fil-ph": "Interesado ba ang employer na kumuha ng mga manggagawang may kapansanan",
+                                "fj-fj": "E taleitaka beka na itaukei ni cakacaka na veivakacakacakataki ni vakaleqai tu vakayago?"
+                            }
+                        },
+                        {
+                            "technicalId": "companyNumberOfWorkersByType",
+                            "id": "numberOfWorkersByType",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Please state number of workers",
+                                "ms-my": "Tolong nyatakan jumlah pekerja",
+                                "id-id": "Harap sebutkan jumlah pekerja",
+                                "fil-ph": "Paki state number ng mga manggagawa",
+                                "fj-fj": "Yalovinaka ni iwiliwili ni tamata cakacaka"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "sectionId": "caseworkers",
+                    "visible": true,
+                    "labels": {
+                        "en-us": "Caseworker",
+                        "ms-my": "Pegawai Kes",
+                        "id-id": "Pekerja kasus",
+                        "fil-ph": "Caseworker",
+                        "fj-fj": "Daucakacaka ni kisi"
+                    }
+                },
+                {
+                    "sectionId": "templates",
+                    "visible": true,
+                    "labels": {
+                        "en-us": "Templates",
+                        "ms-my": "Templat",
+                        "id-id": "Template",
+                        "fil-ph": "Mga template",
+                        "fj-fj": "iVakaraitaki"
+                    },
+                    "fields": [
+                        {
+                            "technicalId": "companyInviteToApplyMessage",
+                            "id": "invitation",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Invite to apply message",
+                                "ms-my": "Mesej jemput untuk memohon",
+                                "id-id": "Undang untuk menerapkan pesan",
+                                "fil-ph": "Mag-anyaya na mag-aplay ng mensahe",
+                                "fj-fj": "Sureta mo vakayagataka na itukutuku"
+                            }
+                        },
+                        {
+                            "technicalId": "companyApplicantRejectionFeedback",
+                            "id": "rejection",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Applicant rejection feedback",
+                                "ms-my": "Maklum balas penolakan pemohon",
+                                "id-id": "Umpan balik penolakan pelamar",
+                                "fil-ph": "Feedback sa pagtanggi ng aplikante",
+                                "fj-fj": "iTukutuku lesu mai ni sega ni ciqomi o koya e kerek"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "sectionId": "contacts",
+                    "visible": true,
+                    "labels": {
+                        "en-us": "Contacts",
+                        "ms-my": "Pengguna",
+                        "id-id": "Kontak",
+                        "fil-ph": "Mga Contact",
+                        "fj-fj": "Veitaratara"
+                    },
+                    "fields": [
+                        {
+                            "id": "companyContactList",
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "[text]",
+                                "ms-my": "[text]",
+                                "id-id": "[teks]",
+                                "fil-ph": "[text]",
+                                "fj-fj": "[text]"
+                            },
+                            "fields": [
+                                {
+                                    "technicalId": "companyContactName",
+                                    "id": "name",
+                                    "editable": true,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "labels": {
+                                        "en-us": "Full name",
+                                        "ms-my": "Nama Penuh",
+                                        "id-id": "Nama lengkap",
+                                        "fil-ph": "Buong pangalan",
+                                        "fj-fj": "Yaca taucoko"
+                                    }
+                                },
+                                {
+                                    "technicalId": "companyContactUsername",
+                                    "id": "username",
+                                    "editable": false,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "labels": {
+                                        "en-us": "Username",
+                                        "ms-my": "Nama Pengguna",
+                                        "id-id": "Nama pengguna",
+                                        "fil-ph": "Username",
+                                        "fj-fj": "Yaca Vakayagataki"
+                                    }
+                                },
+                                {
+                                    "technicalId": "companyContactDepartment",
+                                    "id": "department",
+                                    "editable": true,
+                                    "mandatory": false,
+                                    "visible": true,
+                                    "labels": {
+                                        "en-us": "Department",
+                                        "ms-my": "Jabatan",
+                                        "id-id": "Departemen",
+                                        "fil-ph": "Kagawaran",
+                                        "fj-fj": "Tabacakacaka"
+                                    }
+                                },
+                                {
+                                    "technicalId": "companyContactTitle",
+                                    "id": "title",
+                                    "editable": true,
+                                    "mandatory": false,
+                                    "visible": true,
+                                    "labels": {
+                                        "en-us": "Function title",
+                                        "ms-my": "Jawatan",
+                                        "id-id": "Judul fungsi",
+                                        "fil-ph": "Pamagat ng function",
+                                        "fj-fj": "Ulutaga ni cakacaka"
+                                    }
+                                },
+                                {
+                                    "technicalId": "companyContactPhone",
+                                    "id": "phone",
+                                    "editable": true,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "labels": {
+                                        "en-us": "Telephone",
+                                        "ms-my": "Telefon",
+                                        "id-id": "Telepon",
+                                        "fil-ph": "Telepono",
+                                        "fj-fj": "Talevoni"
+                                    },
+                                    "validation": {
+                                        "regEx": "^(\\+?)[\\s\\-0-9]{9,20}$",
+                                        "errorMessage": {
+                                            "en-us": "Invalid phone number, please enter a valid phone number",
+                                            "ms-my": "Nombor telefon tidak sah, masukkan nombor telefon yang sah",
+                                            "id-id": "Nomor telepon tidak valid, silakan masukkan nomor telepon yang valid",
+                                            "fil-ph": "Imbalidong numero ng telepono, mangyaring magpasok ng isang wastong numero ng telepono",
+                                            "fj-fj": "Naba ni talevoni sega ni vakabau, yalovinaka vakacuruma e dua na naba ni talevoni dodonu"
+                                        },
+                                        "rangeValidation": {
+                                            "min": {
+                                                "rule": 9,
+                                                "errorMessage": {
+                                                    "en-us": "Minimum number of characters (9) for this field has not been reached.",
+                                                    "ms-my": "Jumlah huruf minima untuk medan ini (9) tidak dicapai.",
+                                                    "id-id": "Jumlah minimum karakter (9) untuk bidang ini belum tercapai.",
+                                                    "fil-ph": "Hindi pa naaabot ang minimum na bilang ng mga character (9) para sa larangang ito.",
+                                                    "fj-fj": "Iwiliwili lailai duadua ni matanivola (9) me baleta na lomanibai oqo e se bera ni yacovi."
+                                                }
+                                            },
+                                            "max": {
+                                                "rule": 20,
+                                                "errorMessage": {
+                                                    "en-us": "Maximum number of characters (20) for this field has been exceeded.",
+                                                    "ms-my": "Jumlah huruf maksima untuk medan ini (20) telah dicapai.",
+                                                    "id-id": "Jumlah maksimum karakter (20) untuk bidang ini telah terlampaui.",
+                                                    "fil-ph": "Nalampasan na ang maximum na bilang ng mga character (20) para sa field na ito.",
+                                                    "fj-fj": "Na iwiliwili levu duadua ni matanivola (20) me baleta na lomanibai oqo sa sivia."
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "technicalId": "companyContactEmail",
+                                    "id": "email",
+                                    "editable": true,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "labels": {
+                                        "en-us": "E-mail",
+                                        "ms-my": "E-mel",
+                                        "id-id": "E-mail",
+                                        "fil-ph": "E-mail",
+                                        "fj-fj": "I-meli"
+                                    },
+                                    "validation": {
+                                        "regEx": "^(?:[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[A-Za-z0-9-]*[A-Za-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])$",
+                                        "errorMessage": {
+                                            "en-us": "Email must be a valid email address",
+                                            "ms-my": "Sila pastikan alamat e-mel adalah sah",
+                                            "id-id": "Email harus berupa alamat email yang valid",
+                                            "fil-ph": "Ang email ay dapat na isang wastong email address",
+                                            "fj-fj": "Na imeli e dodonu me dua na itikotiko ni imeli dodonu"
+                                        }
+                                    }
+                                },
+                                {
+                                    "technicalId": "companyContactUserRoles",
+                                    "id": "userRoles",
+                                    "editable": true,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "labels": {
+                                        "en-us": "User access levels",
+                                        "ms-my": "Tahap akses pengguna",
+                                        "id-id": "Tingkat akses pengguna",
+                                        "fil-ph": "Mga antas ng pag access ng gumagamit",
+                                        "fj-fj": "iVakatagedegede ni vakayagataki"
+                                    }
+                                },
+                                {
+                                    "technicalId": "companyContactActive",
+                                    "id": "active",
+                                    "editable": true,
+                                    "mandatory": true,
+                                    "visible": true,
+                                    "labels": {
+                                        "en-us": "Active",
+                                        "ms-my": "Aktif",
+                                        "id-id": "Aktif",
+                                        "fil-ph": "Aktibo",
+                                        "fj-fj": "Bulabula"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": "employerRegistration",
+            "sections": [
+                {
+                    "sectionId": "company",
+                    "visible": true,
+                    "labels": {
+                        "en-us": "Company",
+                        "ms-my": "Syarikat",
+                        "id-id": "Firma",
+                        "fil-ph": "Kumpanya",
+                        "fj-fj": "Kabani"
+                    },
+                    "fields": [
+                        {
+                            "id": "name",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Company name",
+                                "ms-my": "Nama syarikat",
+                                "id-id": "Nama perusahaan",
+                                "fil-ph": "Pangalan ng kumpanya",
+                                "fj-fj": "Yaca ni kabani"
+                            }
+                        },
+                        {
+                            "id": "registrationNumber",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Registration number (SSM)",
+                                "ms-my": "Nombor pendaftaran (SSM)",
+                                "id-id": "Nomor registrasi (SSM)",
+                                "fil-ph": "Numero ng pagpaparehistro (SSM)",
+                                "fj-fj": "Naba ni volayaca (SSM)"
+                            }
+                        },
+                        {
+                            "id": "legalId",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "SOCSO employer code no.",
+                                "ms-my": "No. Kod majikan PERKESO",
+                                "id-id": "Kode pemberi kerja SOCSO no.",
+                                "fil-ph": "SOCSO employer code no.",
+                                "fj-fj": "Nabavuni ni itaukei ni cakacaka ni VVV nabavuni."
+                            }
+                        },
+                        {
+                            "id": "startOperationDate",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Company start operation date",
+                                "ms-my": "Tarikh operasi syarikat dimulakan",
+                                "id-id": "Tanggal mulai operasional perusahaan",
+                                "fil-ph": "Petsa ng pagsisimula ng operasyon ng kumpanya",
+                                "fj-fj": "Tikinisiga ni cakacaka ni kabani"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Date",
+                                    "ms-my": "Tarikh",
+                                    "id-id": "Tanggal",
+                                    "fil-ph": "Petsa",
+                                    "fj-fj": "Tikinisiga"
+                                }
+                            }
+                        },
+                        {
+                            "id": "size",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Company size",
+                                "ms-my": "Saiz syarikat",
+                                "id-id": "Ukuran perusahaan",
+                                "fil-ph": "Laki ng kumpanya",
+                                "fj-fj": "Levu ni kabani"
+                            }
+                        },
+                        {
+                            "id": "sector",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Sector",
+                                "ms-my": "Sektor",
+                                "id-id": "Sektor",
+                                "fil-ph": "Sektor",
+                                "fj-fj": "Tabana"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Select one or more sectors",
+                                    "ms-my": "Pilih satu atau lebih sektor",
+                                    "id-id": "Pilih satu atau beberapa sektor",
+                                    "fil-ph": "Pumili ng isa o higit pang sektor",
+                                    "fj-fj": "Digitaka e dua se sivia na tabana"
+                                }
+                            }
+                        },
+                        {
+                            "id": "line",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Address",
+                                "ms-my": "Alamat",
+                                "id-id": "Alamat",
+                                "fil-ph": "Address",
+                                "fj-fj": "iTikotiko"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Enter street address…",
+                                    "ms-my": "Masukkan alamat…",
+                                    "id-id": "Masukkan alamat jalan...",
+                                    "fil-ph": "Ipasok ang address ng kalye...",
+                                    "fj-fj": "Vakacuruma na itikotiko ni gaunisala..."
+                                }
+                            }
+                        },
+                        {
+                            "id": "companyLocation",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "",
+                                "ms-my": ""
+                            },
+                            "locationSubdivisions": [
+                                {
+                                    "subdivision": "COUNTRY",
+                                    "inputType": "DROPDOWN",
+                                    "labels": {
+                                        "en-us": "Country",
+                                        "ms-my": "Negara",
+                                        "id-id": "Negara",
+                                        "fil-ph": "Bansa",
+                                        "fj-fj": "Vanua"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "Country",
+                                            "ms-my": "Negara",
+                                            "id-id": "Negara",
+                                            "fil-ph": "Bansa",
+                                            "fj-fj": "Vanua"
+                                        }
+                                    }
+                                },
+                                {
+                                    "subdivision": "STATE",
+                                    "inputType": "DROPDOWN",
+                                    "labels": {
+                                        "en-us": "State",
+                                        "ms-my": "Negeri",
+                                        "id-id": "Negara",
+                                        "fil-ph": "Estado",
+                                        "fj-fj": "Yasana"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "State",
+                                            "ms-my": "Negeri",
+                                            "id-id": "Negara",
+                                            "fil-ph": "Estado",
+                                            "fj-fj": "Yasana"
+                                        }
+                                    }
+                                },
+                                {
+                                    "subdivision": "CITY",
+                                    "inputType": "AUTOCOMPLETE",
+                                    "labels": {
+                                        "en-us": "City",
+                                        "ms-my": "Bandar",
+                                        "id-id": "Kota",
+                                        "fil-ph": "Lungsod",
+                                        "fj-fj": "Siti"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "City",
+                                            "ms-my": "Bandar",
+                                            "id-id": "Kota",
+                                            "fil-ph": "Lungsod",
+                                            "fj-fj": "Siti"
+                                        }
+                                    }
+                                },
+                                {
+                                    "subdivision": "POSTAL_CODE",
+                                    "inputType": "AUTOCOMPLETE",
+                                    "labels": {
+                                        "en-us": "Zip/Postal Code",
+                                        "ms-my": "Poskod",
+                                        "id-id": "Kode Pos / Pos",
+                                        "fil-ph": "Zip/Postal Code",
+                                        "fj-fj": "iVakatakilakila ni Meli/Meli"
+                                    },
+                                    "staticContents": {
+                                        "placeholder": {
+                                            "en-us": "Zip/Postal Code",
+                                            "ms-my": "Poskod",
+                                            "id-id": "Kode Pos / Pos",
+                                            "fil-ph": "Zip/Postal Code",
+                                            "fj-fj": "iVakatakilakila ni Meli/Meli"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "description",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Company description",
+                                "ms-my": "Deskripsi syarikat",
+                                "id-id": "Deskripsi perusahaan",
+                                "fil-ph": "Paglalarawan ng kumpanya",
+                                "fj-fj": "iVakamacala ni kabani"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Describe your company’s goals, achievements, vision, perks…",
+                                    "ms-my": "Terangkan mengenai matlamat syarikat anda, pencapaian, visi, faedah-faedah…",
+                                    "id-id": "Jelaskan tujuan, pencapaian, visi, tunjangan...",
+                                    "fil-ph": "Ilarawan ang mga layunin, tagumpay, pangitain, perks ng iyong kumpanya...",
+                                    "fj-fj": "Vakamacalataka na takete ni nomu kabani, rawa ka, raivotu, vinaka ..."
+                                }
+                            }
+                        },
+                        {
+                            "id": "youTubeUrl",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "YouTube",
+                                "ms-my": "YouTube",
+                                "id-id": "YouTube",
+                                "fil-ph": "YouTube",
+                                "fj-fj": "YouTube"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Enter the link to your YouTube company video",
+                                    "ms-my": "Masukkan link ke video YouTube syarikat anda",
+                                    "id-id": "Masukkan link ke video perusahaan YouTube Anda",
+                                    "fil-ph": "Ipasok ang link sa iyong video ng kumpanya sa YouTube",
+                                    "fj-fj": "Vakacuruma na isema ki na nomu vidio ni kabani ni YouTube"
+                                }
+                            }
+                        },
+                        {
+                            "id": "businessEntity",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Business Entity",
+                                "ms-my": "Entiti Perniagaan",
+                                "id-id": "Badan Usaha",
+                                "fil-ph": "Entity ng Negosyo",
+                                "fj-fj": "iYaubula ni Bisinisi"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Please select business entity",
+                                    "ms-my": "Tolong pilih entiti perniagaan",
+                                    "id-id": "Silahkan pilih badan usaha",
+                                    "fil-ph": "Piliin lamang ang entity ng negosyo",
+                                    "fj-fj": "Yalovinaka digitaka na bisinisi veika vakabisinisi"
+                                }
+                            }
+                        },
+                        {
+                            "id": "businessType",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Business Type",
+                                "ms-my": "Jenis perniagaan",
+                                "id-id": "Jenis Bisnis",
+                                "fil-ph": "Uri ng Negosyo",
+                                "fj-fj": "Mataqali Bisinisi"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Please select business type",
+                                    "ms-my": "Tolong pilih jenis perniagaan",
+                                    "id-id": "Silakan pilih jenis bisnis",
+                                    "fil-ph": "Piliin lamang ang uri ng negosyo",
+                                    "fj-fj": "Yalovinaka digitaka na mataqali bisinisi"
+                                }
+                            }
+                        },
+                        {
+                            "id": "websiteAddress",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Website Address",
+                                "ms-my": "Alamat Laman Sesawang",
+                                "id-id": "Alamat situs web",
+                                "fil-ph": "Website Address",
+                                "fj-fj": "iTikotiko ni Mataveilawa"
+                            },
+                            "staticContents": {
+                                "placeholder": {
+                                    "en-us": "Enter the link to your company website",
+                                    "ms-my": "Masukkan pautan ke laman sesawang syarikat anda",
+                                    "id-id": "Masukkan tautan ke situs web perusahaan Anda",
+                                    "fil-ph": "Ipasok ang link sa website ng iyong kumpanya",
+                                    "fj-fj": "Vakacuruma na isema ki na nomu mataveilawa ni kabani"
+                                }
+                            }
+                        },
+                        {
+                            "id": "hasBranches",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Does the company have any other branches/ subsidiaries?",
+                                "ms-my": "Adakah syarikat mempunyai cawangan / anak syarikat lain?",
+                                "id-id": "Apakah perusahaan memiliki cabang/anak perusahaan lain?",
+                                "fil-ph": "May iba pa bang branches/ subsidiary ang company",
+                                "fj-fj": "E tiko beka eso tale na tabana/kabani e tiko ena kabani oqo?"
+                            }
+                        },
+                        {
+                            "id": "hiringWorkersWithDisabilities",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Is employer interested in hiring workers with disabilities?",
+                                "ms-my": "Adakah majikan berminat untuk mengambil pekerja kurang upaya?",
+                                "id-id": "Apakah pemberi kerja tertarik untuk mempekerjakan pekerja penyandang disabilitas?",
+                                "fil-ph": "Interesado ba ang employer na kumuha ng mga manggagawang may kapansanan",
+                                "fj-fj": "E taleitaka beka na itaukei ni cakacaka na veivakacakacakataki ni vakaleqai tu vakayago?"
+                            }
+                        },
+                        {
+                            "id": "numberOfWorkersByType",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Please state number of workers",
+                                "ms-my": "Tolong nyatakan jumlah pekerja",
+                                "id-id": "Harap sebutkan jumlah pekerja",
+                                "fil-ph": "Paki state number ng mga manggagawa",
+                                "fj-fj": "Yalovinaka ni iwiliwili ni tamata cakacaka"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "sectionId": "contact",
+                    "visible": true,
+                    "labels": {
+                        "en-us": "Contact",
+                        "ms-my": "Pengguna",
+                        "id-id": "Kontak",
+                        "fil-ph": "Makipag ugnay sa",
+                        "fj-fj": "Veitaratara"
+                    },
+                    "fields": [
+                        {
+                            "id": "name",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Full name",
+                                "ms-my": "Nama Penuh",
+                                "id-id": "Nama lengkap",
+                                "fil-ph": "Buong pangalan",
+                                "fj-fj": "Yaca taucoko"
+                            }
+                        },
+                        {
+                            "id": "username",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Username",
+                                "ms-my": "Nama Pengguna",
+                                "id-id": "Nama pengguna",
+                                "fil-ph": "Username",
+                                "fj-fj": "Yaca Vakayagataki"
+                            }
+                        },
+                        {
+                            "id": "department",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Department",
+                                "ms-my": "Jabatan",
+                                "id-id": "Departemen",
+                                "fil-ph": "Kagawaran",
+                                "fj-fj": "Tabacakacaka"
+                            }
+                        },
+                        {
+                            "id": "title",
+                            "editable": true,
+                            "mandatory": false,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Function title",
+                                "ms-my": "Jawatan",
+                                "id-id": "Judul fungsi",
+                                "fil-ph": "Pamagat ng function",
+                                "fj-fj": "Ulutaga ni cakacaka"
+                            }
+                        },
+                        {
+                            "id": "phone",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "Telephone",
+                                "ms-my": "Telefon",
+                                "id-id": "Telepon",
+                                "fil-ph": "Telepono",
+                                "fj-fj": "Talevoni"
+                            },
+                            "validation": {
+                                "regEx": "^(\\+?)[\\s\\-0-9]{9,20}$",
+                                "errorMessage": {
+                                    "en-us": "Invalid phone number, please enter a valid phone number",
+                                    "ms-my": "Nombor telefon tidak sah, masukkan nombor telefon yang sah",
+                                    "id-id": "Nomor telepon tidak valid, silakan masukkan nomor telepon yang valid",
+                                    "fil-ph": "Imbalidong numero ng telepono, mangyaring magpasok ng isang wastong numero ng telepono",
+                                    "fj-fj": "Naba ni talevoni sega ni vakabau, yalovinaka vakacuruma e dua na naba ni talevoni dodonu"
+                                },
+                                "rangeValidation": {
+                                    "min": {
+                                        "rule": 9,
+                                        "errorMessage": {
+                                            "en-us": "Minimum number of characters (9) for this field has not been reached.",
+                                            "ms-my": "Jumlah huruf minima untuk medan ini (9) tidak dicapai.",
+                                            "id-id": "Jumlah minimum karakter (9) untuk bidang ini belum tercapai.",
+                                            "fil-ph": "Hindi pa naaabot ang minimum na bilang ng mga character (9) para sa larangang ito.",
+                                            "fj-fj": "Iwiliwili lailai duadua ni matanivola (9) me baleta na lomanibai oqo e se bera ni yacovi."
+                                        }
+                                    },
+                                    "max": {
+                                        "rule": 20,
+                                        "errorMessage": {
+                                            "en-us": "Maximum number of characters (20) for this field has been exceeded.",
+                                            "ms-my": "Jumlah huruf maksima untuk medan ini (20) telah dicapai.",
+                                            "id-id": "Jumlah maksimum karakter (20) untuk bidang ini telah terlampaui.",
+                                            "fil-ph": "Nalampasan na ang maximum na bilang ng mga character (20) para sa field na ito.",
+                                            "fj-fj": "Na iwiliwili levu duadua ni matanivola (20) me baleta na lomanibai oqo sa sivia."
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "id": "email",
+                            "editable": true,
+                            "mandatory": true,
+                            "visible": true,
+                            "labels": {
+                                "en-us": "E-mail",
+                                "ms-my": "E-mel",
+                                "id-id": "E-mail",
+                                "fil-ph": "E-mail",
+                                "fj-fj": "I-meli"
+                            },
+                            "validation": {
+                                "regEx": "^(?:[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[A-Za-z0-9-]*[A-Za-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])$",
+                                "errorMessage": {
+                                    "en-us": "Email must be a valid email address",
+                                    "ms-my": "Sila pastikan alamat e-mel adalah sah",
+                                    "id-id": "Email harus berupa alamat email yang valid",
+                                    "fil-ph": "Ang email ay dapat na isang wastong email address",
+                                    "fj-fj": "Na imeli e dodonu me dua na itikotiko ni imeli dodonu"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": "applicants",
+            "columns": [
+                {
+                    "id": "matchScore",
+                    "dataField": "$.score",
+                    "labels": {
+                        "en-us": "Match",
+                        "ms-my": "Padanan",
+                        "id-id": "Korek api",
+                        "fil-ph": "Tugma",
+                        "fj-fj": "Veisotari"
+                    }
+                },
+                {
+                    "id": "jobseekerName",
+                    "dataField": "$.profileSnapshot.person.name.fullName",
+                    "labels": {
+                        "en-us": "Name",
+                        "ms-my": "Nama",
+                        "id-id": "Nama",
+                        "fil-ph": "Pangalan",
+                        "fj-fj": "Yaca"
+                    }
+                },
+                {
+                    "id": "jobseekerPhone",
+                    "dataField": "$.phone",
+                    "labels": {
+                        "en-us": "Phone",
+                        "ms-my": "Nombor Telefon",
+                        "id-id": "Ponsel",
+                        "fil-ph": "Telepono",
+                        "fj-fj": "Talevoni"
+                    }
+                },
+                {
+                    "id": "jobseekerEmail",
+                    "dataField": "$.email",
+                    "labels": {
+                        "en-us": "E-mail",
+                        "ms-my": "E-mel",
+                        "id-id": "E-mail",
+                        "fil-ph": "E-mail",
+                        "fj-fj": "I-meli"
+                    }
+                },
+                {
+                    "id": "applicationDate",
+                    "dataField": "$.applicationDate",
+                    "dateFormat": "dd-MM-yy",
+                    "labels": {
+                        "en-us": "Date",
+                        "ms-my": "Tarikh",
+                        "id-id": "Tanggal",
+                        "fil-ph": "Petsa",
+                        "fj-fj": "Tikinisiga"
+                    }
+                }
+            ]
+        },
+        {
+            "pageId": "matchedApplicants",
+            "facets": [
+                {
+                    "id": "STATE",
+                    "labels": {
+                        "en-us": "State",
+                        "ms-my": "Negeri",
+                        "id-id": "Negara",
+                        "fil-ph": "Estado",
+                        "fj-fj": "Yasana"
+                    },
+                    "taxonomyId": "location",
+                    "taxonomyLevel": "2"
+                },
+                {
+                    "id": "CITY",
+                    "labels": {
+                        "en-us": "City",
+                        "ms-my": "Bandar",
+                        "id-id": "Kota",
+                        "fil-ph": "Lungsod",
+                        "fj-fj": "Siti"
+                    },
+                    "taxonomyId": "location",
+                    "taxonomyLevel": "3"
+                },
+                {
+                    "id": "EDUCATION_LEVEL",
+                    "labels": {
+                        "en-us": "Education level",
+                        "ms-my": "Akademik",
+                        "id-id": "Tingkat pendidikan",
+                        "fil-ph": "Antas ng edukasyon",
+                        "fj-fj": "iVakatagedegede ni vuli"
+                    },
+                    "taxonomyId": "education_level"
+                }
+            ]
+        },
+        {
+            "pageId": "vacancyDetails",
+            "sections": [
+                {
+                    "sectionId": "vacancyDetailsHeader",
+                    "fields": [
+                        {
+                            "id": "location",
+                            "dataField": "$.location",
+                            "taxonomy": "location",
+                            "dataTemplate": "{CITY}"
+                        }
+                    ]
+                },
+                {
+                    "sectionId": "vacancyDetailsPrimaryPanel",
+                    "fields": [
+                        {
+                            "id": "datePosted",
+                            "dataField": "$.datePosted",
+                            "valueType": "Date",
+                            "labels": {
+                                "en-us": "Date posted:",
+                                "ms-my": "Tarikh diiklankan:",
+                                "id-id": "Tanggal diposting:",
+                                "fil-ph": "Petsa ng pag-post:",
+                                "fj-fj": "Tikinisiga a biu kina:"
+                            }
+                        },
+                        {
+                            "id": "expiration",
+                            "dataField": "$.expiration",
+                            "format": "d MMM y",
+                            "valueType": "Date",
+                            "labels": {
+                                "en-us": "Open until:",
+                                "ms-my": "Dibuka sehingga:",
+                                "id-id": "Buka sampai:",
+                                "fil-ph": "Buksan hanggang sa:",
+                                "fj-fj": "Dola me yacova na:"
+                            }
+                        },
+                        {
+                            "id": "numberOfApplications",
+                            "dataField": "$.statistics.numberOfApplications",
+                            "valueType": "Number",
+                            "labels": {
+                                "en-us": "Applied:",
+                                "ms-my": "Permohonan diterima:",
+                                "id-id": "Diterapkan:",
+                                "fil-ph": "Inilapat:",
+                                "fj-fj": "Vakayagataki:"
+                            }
+                        },
+                        {
+                            "id": "openPositionCount",
+                            "dataField": "$.openPositionCount",
+                            "valueType": "Number",
+                            "labels": {
+                                "en-us": "Positions:",
+                                "ms-my": "Kekosongan Jawatan:",
+                                "id-id": "Posisi:",
+                                "fil-ph": "Mga Posisyon:",
+                                "fj-fj": "Itutu:"
+                            }
+                        },
+                        {
+                            "id": "actualWages",
+                            "dataField": "$.actualWages",
+                            "labels": {
+                                "en-us": "Actual Salary:",
+                                "ms-my": "Gaji sebenar:",
+                                "id-id": "Gaji Sebenarnya:",
+                                "fil-ph": "Aktwal na Suweldo:",
+                                "fj-fj": "Isau Dina:"
+                            },
+                            "valueType": "Currency",
+                            "condition": {
+                                "!=": [
+                                    {
+                                        "var": "foreignExpatriateApplication"
+                                    },
+                                    null
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "sectionId": "vacancyDetailsSecondaryPanel",
+                    "fields": [
+                        {
+                            "id": "contractType",
+                            "dataField": "$.contractType",
+                            "valueType": "Taxonomy",
+                            "taxonomy": "contract_type"
+                        },
+                        {
+                            "id": "offeredRemunerationPackages",
+                            "dataField": "$.offeredRemunerationPackages",
+                            "valueType": "Taxonomy",
+                            "taxonomy": "salary_range"
+                        },
+                        {
+                            "id": "negotiableSalary",
+                            "dataField": "$.negotiableSalary",
+                            "valueType": "Boolean",
+                            "valueMap": {
+                                "true": {
+                                    "en-us": "Salary negotiable",
+                                    "ms-my": "Gaji boleh dirunding",
+                                    "id-id": "Gaji bisa dinegosiasikan",
+                                    "fil-ph": "Suweldo negotiable",
+                                    "fj-fj": "Isau e rawa ni veisautaki"
+                                }
+                            }
+                        },
+                        {
+                            "id": "hoursPerWeek",
+                            "dataField": "$.hoursPerWeek",
+                            "valueType": "Taxonomy",
+                            "taxonomy": "work_hours"
+                        },
+                        {
+                            "id": "educationDegree",
+                            "dataField": "$.educationDegree",
+                            "valueType": "Taxonomy",
+                            "taxonomy": "education_level"
+                        },
+                        {
+                            "id": "vacancySectors",
+                            "dataField": "$.vacancySectors",
+                            "valueType": "Taxonomy",
+                            "taxonomy": "industry",
+                            "truncated": true
+                        }
+                    ]
+                },
+                {
+                    "sectionId": "vacancyDetailsCompanyInformation",
+                    "fields": [
+                        {
+                            "id": "companySectors",
+                            "dataField": "$.companySectors[*].id",
+                            "valueType": "List",
+                            "taxonomy": "industry",
+                            "truncated": false
+                        },
+                        {
+                            "id": "companySize",
+                            "dataField": "$.companySize",
+                            "valueType": "String",
+                            "taxonomy": "company_size",
+                            "truncated": false
+                        },
+                        {
+                            "id": "companyLocation",
+                            "dataField": "$.location",
+                            "valueType": "Location",
+                            "taxonomy": "location",
+                            "dataTemplate": "{STATE} - {CITY} - {POSTAL_CODE}"
+                        },
+                        {
+                            "id": "companyDescription",
+                            "dataField": "$.companyDescription",
+                            "valueType": "String",
+                            "truncated": false
+                        },
+                        {
+                            "id": "companyYouTubeUrl",
+                            "dataField": "$.companyYouTubeUrl",
+                            "valueType": "YoutubeUrl"
+                        },
+                        {
+                            "id": "companyGeoLocation",
+                            "dataField": "$.geoLocation",
+                            "valueType": "GeoLocation"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "navbar": {
+        "navbarLinkItems": [
+            {
+                "id": "myVacancies",
+                "isHomePage": true
+            },
+            {
+                "id": "myCompany"
+            }
+        ],
+        "navbarPinnedItems": [
+            {
+                "id": "language"
+            },
+            {
+                "id": "notificationBell"
+            }
+        ],
+        "navbarUserItems": [
+            {
+                "id": "notificationSettings"
+            },
+            {
+                "id": "signOut"
+            }
+        ]
+    },
+    "properties": {
+        "prefix": "${",
+        "suffix": "}",
+        "values": {}
+    }
+}

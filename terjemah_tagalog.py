@@ -13,7 +13,7 @@ def translate_to_filipino(text, retries=3):
     Translate the given text from English to Filipino using Microsoft Translator API.
     """
     path = '/translate?api-version=3.0'
-    params = '&from=en&to=tl'
+    params = '&from=en&to=fil'
     constructed_url = endpoint + path + params
 
     headers = {

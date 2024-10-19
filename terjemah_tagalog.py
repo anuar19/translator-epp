@@ -89,7 +89,7 @@ def update_json_file(input_file):
         print("No translations were inserted. Check if 'ms-my' and 'en-us' fields are present in the JSON file.")
 
     # Save the updated JSON file with '-updated' appended to the filename
-    updated_file_name = os.path.splitext(input_file)[0] + '-updated-tagalog.json'
+    updated_file_name = os.path.splitext(input_file)[0] + '-fil.json'
     try:
         with open(updated_file_name, 'w', encoding='utf-8') as updated_file:
             json.dump(data, updated_file, ensure_ascii=False, indent=4)
@@ -100,5 +100,5 @@ def update_json_file(input_file):
     print(f"Total Tagalog translations inserted: {translations_done}")
 
 # Specify the path to your JSON file
-json_file = 'generic-popups-configuration-updated-indonesian.json'
+json_file = 'language_source_files\generic-popups-configuration-id.json'
 update_json_file(json_file)

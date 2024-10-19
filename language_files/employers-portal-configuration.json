@@ -1,0 +1,2241 @@
+{
+	"pages": [
+		{
+			"pageId": "myVacancies",
+			"facets": [
+				{
+					"id": "RECENCY",
+					"labels": {
+						"en-us": "Date posted",
+						"ms-my": "Tarikh diiklankan"
+					},
+					"options": {
+						"TODAY": {
+							"en-us": "Since yesterday",
+							"ms-my": "Sejak semalam"
+						},
+						"3DAYSAGO": {
+							"en-us": "Last 3 days",
+							"ms-my": "3 hari lepas"
+						},
+						"THIS_WEEK": {
+							"en-us": "Last week",
+							"ms-my": "Minggu lepas"
+						},
+						"2WEEKSAGO": {
+							"en-us": "Last 2 weeks",
+							"ms-my": "2 minggu lepas"
+						},
+						"THIS_MONTH": {
+							"en-us": "Last month",
+							"ms-my": "Bulan lepas"
+						}
+					}
+				},
+				{
+					"id": "STATUS",
+					"labels": {
+						"en-us": "Status",
+						"ms-my": "Status"
+					},
+					"options": {
+						"Active": {
+							"en-us": "Active vacancies",
+							"ms-my": "Aktif"
+						},
+						"Inactive": {
+							"en-us": "Inactive vacancies",
+							"ms-my": "Tidak Aktif"
+						},
+						"Upcoming": {
+							"en-us": "Upcoming vacancies",
+							"ms-my": "Akan Datang"
+						}
+					}
+				},
+				{
+					"id": "CONTRACT_TYPE",
+					"labels": {
+						"en-us": "Contract type",
+						"ms-my": "Status Pekerjaan"
+					},
+					"taxonomyId": "contract_type"
+				},
+				{
+					"id": "HOURS",
+					"labels": {
+						"en-us": "Hours per week",
+						"ms-my": "Waktu Bekerja"
+					},
+					"taxonomyId": "work_hours"
+				},
+				{
+					"id": "YEARS_OF_WORKING_EXPERIENCE",
+					"labels": {
+						"en-us": "Working experience",
+						"ms-my": "Pengalaman bekerja"
+					},
+					"taxonomyId": "years-of-working-experience-range"
+				},
+				{
+					"id": "SECTOR",
+					"labels": {
+						"en-us": "Sector name",
+						"ms-my": "Sektor"
+					},
+					"taxonomyId": "industry"
+				},
+				{
+					"id": "EDUCATION",
+					"labels": {
+						"en-us": "Education level",
+						"ms-my": "Akademik"
+					},
+					"taxonomyId": "education_level"
+				},
+				{
+					"id": "SALARY",
+					"labels": {
+						"en-us": "Salary",
+						"ms-my": "Gaji"
+					},
+					"taxonomyId": "salary_range"
+				},
+				{
+					"id": "HIRING_INCENTIVE",
+					"labels": {
+						"en-us": "Job category",
+						"ms-my": "Kategori pekerjaan"
+					},
+					"taxonomyId": "hiring-incentives"
+				}
+			],
+			"popups": {
+				"exportApplicants": {
+					"referenceId": "exportApplicants"
+				}
+			},
+			"sections": [
+				{
+					"sectionId": "vacancyDetailsSummaryHeader",
+					"fields": [
+						{
+							"id": "location",
+							"dataField": "$.location",
+							"taxonomy": "location",
+							"dataTemplate": "{CITY}",
+							"truncated": false
+						}
+					]
+				},
+				{
+					"sectionId": "vacancyDetailsSummary",
+					"truncateContent": true,
+					"fields": [
+						{
+							"id": "contractType",
+							"dataField": "$.contractType",
+							"valueType": "Taxonomy",
+							"taxonomy": "contract_type"
+						},
+						{
+							"id": "hoursPerWeek",
+							"dataField": "$.hoursPerWeek",
+							"valueType": "Taxonomy",
+							"taxonomy": "work_hours"
+						},
+						{
+							"id": "educationDegree",
+							"dataField": "$.educationDegree",
+							"valueType": "Taxonomy",
+							"taxonomy": "education_level"
+						},
+						{
+							"id": "offeredRemunerationPackages",
+							"dataField": "$.offeredRemunerationPackages",
+							"valueType": "Taxonomy",
+							"taxonomy": "salary_range",
+							"condition": {
+								"and": [
+									{
+										"!=": [
+											{
+												"var": "displaySalary"
+											},
+											null
+										]
+									},
+									{
+										"==": [
+											{
+												"var": "displaySalary"
+											},
+											true
+										]
+									}
+								]
+							}
+						},
+						{
+							"id": "datePosted",
+							"dataField": "$.datePosted",
+							"valueType": "Date"
+						}
+					]
+				}
+			]
+		},
+		{
+			"pageId": "vacancy",
+			"sections": [
+				{
+					"sectionId": "vacancy",
+					"visible": true,
+					"labels": {
+						"en-us": "Vacancy",
+						"ms-my": "Jawatan Kosong"
+					},
+					"fields": [
+						{
+							"technicalId": "vacancyTitle",
+							"id": "title",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Vacancy title",
+								"ms-my": "Nama jawatan"
+							}
+						},
+						{
+							"technicalId": "vacancyForeignExpatriateApplication",
+							"id": "foreignExpatriateApplication",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Foreign/Expatriate application",
+								"ms-my": "Permohonan Pekerja Asing/Ekspatriat"
+							}
+						},
+						{
+							"technicalId": "vacancyForeignExpatriateType",
+							"id": "foreignExpatriateType",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"dependencyConditions": {
+								"mandatory": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyForeignExpatriateApplication"
+											},
+											null
+										]
+									}
+								}
+							},
+							"labels": {
+								"en-us": "Please select whether this vacancy is available for foreign or expatriate workers",
+								"ms-my": "Sila pilih kekosongan jawatan untuk warga asing atau ekspatriat"
+							}
+						},
+						{
+							"technicalId": "vacancyForeignExpatriateReminder",
+							"id": "foreignExpatriateReminder",
+							"editable": false,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "The company must conduct interviews to obtain local candidates for the advertised positions. Please contact the nearest SOCSO Office for assistance.",
+								"ms-my": "Pihak syarikat hendaklah melaksanakan temu duga mendapatkan calon tempatan bagi jawatan yang diiklankan. Sila hubungi Pejabat PERKESO berdekatan bagi urusan lanjut."
+							}
+						},
+						{
+							"technicalId": "vacancyOccupation",
+							"id": "occupation",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Occupation",
+								"ms-my": "Pekerjaan"
+							}
+						},
+						{
+							"id": "escoCode",
+							"editable": false,
+							"mandatory": false,
+							"enabled": true,
+							"labels": {
+								"en-us": "ESCO code",
+								"ms-my": "Kod ESCO"
+							}
+						},
+						{
+							"technicalId": "vacancyOpenPositionCount",
+							"id": "openPositionCount",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"valueType": "Number",
+							"labels": {
+								"en-us": "Number of Positions",
+								"ms-my": "Jumlah kekosongan jawatan"
+							},
+							"validation": {
+								"rangeValidation": {
+									"max": {
+										"rule": 9999
+									}
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyNumberOfPositionsByType",
+							"id": "numberOfPositionsByType",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"dependencyConditions": {
+								"mandatory": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyForeignExpatriateApplication"
+											},
+											null
+										]
+									}
+								}
+							},
+							"labels": {
+								"en-us": "Please state the number of positions required based on the categories below",
+								"ms-my": "Sila catat bilangan jawatan yang diperlukan mengikut kategori dibawah"
+							}
+						},
+						{
+							"technicalId": "vacancyTitleMalay",
+							"id": "malay",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"dependencyConditions": {
+								"mandatory": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyForeignExpatriateApplication"
+											},
+											null
+										]
+									}
+								}
+							},
+							"labels": {
+								"en-us": "Job title (Bahasa Malaysia)",
+								"ms-my": "Nama jawatan (Bahasa Malaysia)"
+							}
+						},
+						{
+							"technicalId": "vacancyTitleEnglish",
+							"id": "english",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"dependencyConditions": {
+								"mandatory": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyForeignExpatriateApplication"
+											},
+											null
+										]
+									}
+								}
+							},
+							"labels": {
+								"en-us": "Job title (English)",
+								"ms-my": "Nama jawatan (Bahasa Inggeris)"
+							}
+						},
+						{
+							"technicalId": "vacancyNumberOfAlreadyHired",
+							"id": "numberOfAlreadyHired",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"dependencyConditions": {
+								"mandatory": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyForeignExpatriateApplication"
+											},
+											null
+										]
+									}
+								}
+							},
+							"labels": {
+								"en-us": "Number of hiring done",
+								"ms-my": "Bilangan pekerja yang telah dilantik"
+							}
+						},
+						{
+							"technicalId": "vacancyAvailableForBothSex",
+							"id": "availableForBothSex",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"dependencyConditions": {
+								"mandatory": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyForeignExpatriateApplication"
+											},
+											null
+										]
+									}
+								}
+							},
+							"labels": {
+								"en-us": "Are positions available for both male and female?",
+								"ms-my": "Adakah kekosongan jawatan ini terbuka kepada lelaki dan wanita?"
+							}
+						},
+						{
+							"technicalId": "vacancyNumberOfPositionsByGender",
+							"id": "numberOfPositionsByGender",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"dependencyConditions": {
+								"mandatory": {
+									"expression": {
+										"===": [
+											{
+												"var": "vacancyAvailableForBothSex"
+											},
+											false
+										]
+									}
+								}
+							},
+							"labels": {
+								"en-us": "Number of positions for",
+								"ms-my": "Bilangan jawatan untuk"
+							}
+						},
+						{
+							"technicalId": "vacancyForeignSupportingDocument",
+							"id": "foreignSupportingDocuments",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"vacancyMinimumValidityInDays": 14,
+							"vacancyMaximumValidityInDays": 30,
+							"labels": {
+								"en-us": "Upload supporting document",
+								"ms-my": "Muat naik dokumen sokongan"
+							}
+						},
+						{
+							"technicalId": "vacancyExperienceLevel",
+							"id": "experienceLevel",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Position Level",
+								"ms-my": "Taraf jawatan"
+							}
+						},
+						{
+							"technicalId": "vacancyYearsOfWorkingExperience",
+							"id": "yearsOfWorkingExperience",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Working experience",
+								"ms-my": "Pengalaman bekerja"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Select working experience",
+									"ms-my": "Pilih pengalaman bekerja"
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyRelatedCompetencies",
+							"id": "relatedCompetencies",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Related skills",
+								"ms-my": "Kemahiran yang berkaitan"
+							}
+						},
+						{
+							"technicalId": "vacancyEducationDegree",
+							"id": "educationDegree",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Education level",
+								"ms-my": "Tahap akademik"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Education level",
+									"ms-my": "Tahap akademik"
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyFieldOfStudy",
+							"id": "fieldOfStudy",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Field of Study",
+								"ms-my": "Bidang Akademik"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Select field of study",
+									"ms-my": "Pilih bidang akademik"
+								}
+							}
+						},
+						{
+							"technicalId": "vacancySectors",
+							"id": "sectors",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Sector",
+								"ms-my": "Sektor"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Select one or more sectors",
+									"ms-my": "Pilih satu atau lebih sektor"
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyDescription",
+							"id": "description",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Job description",
+								"ms-my": "Deskripsi Jawatan"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Describe the duties, requirements, and benefits of the job.",
+									"ms-my": "Sila terangkan tugas-tugas, keperluan, dan faedah berkaitan jawatan berkenaan."
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyLanguages",
+							"id": "languages",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Language",
+								"ms-my": "Bahasa"
+							},
+							"fields": [
+								{
+									"technicalId": "vacancyLanguageTaxonomyNodeId",
+									"id": "taxonomyNodeId",
+									"editable": true,
+									"mandatory": true,
+									"visible": true,
+									"labels": {
+										"en-us": "Language",
+										"ms-my": "Bahasa"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "Language",
+											"ms-my": "Bahasa"
+										}
+									}
+								},
+								{
+									"technicalId": "vacancyLanguageProficiencyLevel",
+									"id": "proficiencyLevel",
+									"editable": true,
+									"mandatory": false,
+									"visible": false,
+									"labels": {
+										"en-us": "Level",
+										"ms-my": "Tahap"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "Level",
+											"ms-my": "Tahap"
+										}
+									}
+								},
+								{
+									"technicalId": "vacancyLanguageReadingSkill",
+									"id": "reading",
+									"editable": true,
+									"mandatory": true,
+									"visible": true,
+									"taxonomy": "language_proficiency",
+									"valueType": "Taxonomy",
+									"dataField": "$.languages[*].languageSkills[\"READING\"]",
+									"labels": {
+										"en-us": "Reading",
+										"ms-my": "Pembacaan"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "Select level",
+											"ms-my": "Pilih tahap"
+										}
+									}
+								},
+								{
+									"technicalId": "vacancyLanguageSpeakingSkill",
+									"id": "speaking",
+									"editable": true,
+									"mandatory": true,
+									"visible": true,
+									"taxonomy": "language_proficiency",
+									"valueType": "Taxonomy",
+									"dataField": "$.languages[*].languageSkills[\"SPEAKING\"]",
+									"labels": {
+										"en-us": "Speaking",
+										"ms-my": "Percakapan"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "Select level",
+											"ms-my": "Pilih tahap"
+										}
+									}
+								},
+								{
+									"technicalId": "vacancyLanguageWritingSkill",
+									"id": "writing",
+									"editable": true,
+									"mandatory": true,
+									"visible": true,
+									"taxonomy": "language_proficiency",
+									"valueType": "Taxonomy",
+									"dataField": "$.languages[*].languageSkills[\"WRITING\"]",
+									"labels": {
+										"en-us": "Writing",
+										"ms-my": "Penulisan"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "Select level",
+											"ms-my": "Pilih tahap"
+										}
+									}
+								},
+								{
+									"technicalId": "vacancyLanguageOtherLanguage",
+									"id": "otherLanguage",
+									"editable": true,
+									"mandatory": true,
+									"visible": true,
+									"labels": {
+										"en-us": "Other language",
+										"ms-my": "Bahasa lain"
+									}
+								}
+							]
+						},
+						{
+							"technicalId": "vacancyLicenses",
+							"id": "licenses",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Drivers license",
+								"ms-my": "Lesen memandu"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Select one or more categories",
+									"ms-my": "Pilih satu atau lebih kategori"
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyDisability",
+							"id": "disability",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Disabilities",
+								"ms-my": "Ketidakupayaan"
+							}
+						}
+					]
+				},
+				{
+					"sectionId": "termsOfEmployment",
+					"visible": true,
+					"labels": {
+						"en-us": "Terms of employment",
+						"ms-my": "Terma pekerjaan"
+					},
+					"fields": [
+						{
+							"technicalId": "vacancyContractType",
+							"id": "contractType",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Contract type",
+								"ms-my": "Status Pekerjaan"
+							}
+						},
+						{
+							"technicalId": "vacancyHoursPerWeek",
+							"id": "hoursPerWeek",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Hours per week",
+								"ms-my": "Waktu Bekerja"
+							}
+						},
+						{
+							"technicalId": "vacancyOfferedRemunerationPackages",
+							"id": "offeredRemunerationPackages",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Salary",
+								"ms-my": "Gaji"
+							}
+						},
+						{
+							"technicalId": "vacancyActualWages",
+							"id": "actualWages",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Actual wages (RM)",
+								"ms-my": "Upah sebenar (RM)"
+							},
+							"validation": {
+								"regEx": "^[0-9]*$",
+								"errorMessage": {
+									"en-us": "Actual wages can only be whole number.",
+									"ms-my": "Upah sebenar hanya nombor bulat sahaja."
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyDisplaySalary",
+							"id": "displaySalary",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"defaultValue": true,
+							"labels": {
+								"en-us": "Display salary range in jobseeker portal",
+								"ms-my": "Paparkan julat gaji di portal"
+							},
+							"dependencyConditions": {
+								"editable": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyOfferedRemunerationPackages"
+											},
+											null
+										]
+									},
+									"resetValueOnConditionNotMet": true
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyNegotiableSalary",
+							"id": "negotiableSalary",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Salary negotiable",
+								"ms-my": "Gaji boleh dirunding"
+							}
+						},
+						{
+							"technicalId": "vacancyAddressIsSameAsCompanyAddress",
+							"id": "sameAddressAsCompany",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "The vacancy location is the same as the company address",
+								"ms-my": "Penempatan jawatan adalah sama dengan alamat syarikat"
+							}
+						},
+						{
+							"technicalId": "vacancyLocation",
+							"id": "vacancyLocation",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Address",
+								"ms-my": "Alamat"
+							},
+							"dependencyConditions": {
+								"visible": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyAddressIsSameAsCompanyAddress"
+											},
+											true
+										]
+									}
+								},
+								"editable": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyAddressIsSameAsCompanyAddress"
+											},
+											true
+										]
+									},
+									"resetValueOnConditionNotMet": true
+								},
+								"mandatory": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyAddressIsSameAsCompanyAddress"
+											},
+											null
+										]
+									}
+								}
+							},
+							"locationSubdivisions": [
+								{
+									"subdivision": "STATE",
+									"inputType": "DROPDOWN",
+									"labels": {
+										"en-us": "State",
+										"ms-my": "Negeri"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "State",
+											"ms-my": "Negeri"
+										}
+									}
+								},
+								{
+									"subdivision": "CITY",
+									"inputType": "AUTOCOMPLETE",
+									"labels": {
+										"en-us": "City",
+										"ms-my": "Bandar"
+									}
+								},
+								{
+									"subdivision": "POSTAL_CODE",
+									"inputType": "AUTOCOMPLETE",
+									"labels": {
+										"en-us": "Zip/Postal Code",
+										"ms-my": "Poskod"
+									}
+								}
+							]
+						},
+						{
+							"technicalId": "vacancyAddressLine",
+							"id": "line",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Address",
+								"ms-my": "Alamat"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Enter street address…",
+									"ms-my": "Masukkan alamat…"
+								}
+							},
+							"dependencyConditions": {
+								"visible": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyAddressIsSameAsCompanyAddress"
+											},
+											true
+										]
+									}
+								},
+								"editable": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyAddressIsSameAsCompanyAddress"
+											},
+											true
+										]
+									},
+									"resetValueOnConditionNotMet": true
+								},
+								"mandatory": {
+									"expression": {
+										"!==": [
+											{
+												"var": "vacancyAddressIsSameAsCompanyAddress"
+											},
+											null
+										]
+									}
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyStartDate",
+							"id": "startDate",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Job start date",
+								"ms-my": "Tarikh mula bekerja"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Date",
+									"ms-my": "Tarikh"
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyEndDate",
+							"id": "endDate",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Job end date",
+								"ms-my": "Tarikh akhir bekerja"
+							}
+						}
+					]
+				},
+				{
+					"sectionId": "disability",
+					"visible": false,
+					"labels": {
+						"en-us": "Disability",
+						"ms-my": "DISABILITY"
+					}
+				},
+				{
+					"sectionId": "hiringIncentives",
+					"visible": true,
+					"labels": {
+						"en-us": "Job category",
+						"ms-my": "Kategori pekerjaan"
+					}
+				},
+				{
+					"sectionId": "settings",
+					"visible": true,
+					"labels": {
+						"en-us": "Settings",
+						"ms-my": "Setting"
+					},
+					"fields": [
+						{
+							"technicalId": "vacancyContact",
+							"id": "contact",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Contact",
+								"ms-my": "Pengguna"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Select a contact",
+									"ms-my": "Pilih orang untuk dihubungi"
+								}
+							}
+						},
+						{
+							"technicalId": "vacancyShowContactPerson",
+							"id": "showContactPerson",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Show contact information in the vacancy details view",
+								"ms-my": "Tunjukkan maklumat perhubungan pada paparan butiran jawatan kosong"
+							}
+						},
+						{
+							"technicalId": "vacancyHideCompanyInformation",
+							"id": "hideCompanyInformation",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Hide confidential company information in the vacancy view",
+								"ms-my": "Sembunyikan maklumat sulit majikan pada paparan jawatan kosong"
+							}
+						},
+						{
+							"technicalId": "vacancyRequireResume",
+							"id": "requireResume",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Applicant must attach a resume",
+								"ms-my": "Pemohon harus melampirkan resume"
+							}
+						},
+						{
+							"technicalId": "vacancyActivityEndDate",
+							"id": "activityEndDate",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"vacancyMaximumValidityInDays": 30,
+							"labels": {
+								"en-us": "Vacancy start and end date",
+								"ms-my": "Tarikh mula dan tamat jawatan kosong"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"pageId": "employerProfile",
+			"sections": [
+				{
+					"sectionId": "company",
+					"visible": true,
+					"labels": {
+						"en-us": "Company",
+						"ms-my": "Syarikat"
+					},
+					"fields": [
+						{
+							"technicalId": "companyName",
+							"id": "name",
+							"editable": false,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Company name",
+								"ms-my": "Nama syarikat"
+							}
+						},
+						{
+							"id": "companyBanner",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Company banner",
+								"ms-my": "Gambar atau banner syarikat"
+							},
+							"fileUploadConfiguration": {
+								"uploadLabel": {
+									"en-us": "Upload",
+									"ms-my": "Muat naik"
+								},
+								"removeLabel": {
+									"en-us": "Remove",
+									"ms-my": "Padam"
+								},
+								"fileInformationLabel": {
+									"en-us": "<b>Recommended size:</b><br> 708x154 pixels<br><b>Maximum file size:</b><br> 5MB<br><b>Only .jpg and .png files<br> are supported.</b>",
+									"ms-my": "<b>Saiz yang disyorkan:</b><br> 708x154 pixels<br><b>Saiz fail maksimum:</b><br> 5MB<br><b>Hanya fail .jpg dan .png<br> yang disokong.</b>"
+								},
+								"recommendedImageDimensions": {
+									"height": 154,
+									"width": 708
+								}
+							}
+						},
+						{
+							"id": "companyLogo",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Company logo",
+								"ms-my": "Logo syarikat"
+							},
+							"fileUploadConfiguration": {
+								"uploadLabel": {
+									"en-us": "Upload",
+									"ms-my": "Muat naik"
+								},
+								"removeLabel": {
+									"en-us": "Remove",
+									"ms-my": "Padam"
+								},
+								"fileInformationLabel": {
+									"en-us": "<b>Recommended size:</b><br> 400x400 pixels<br><b>Maximum file size:</b><br> 5MB<br><b>Only .jpg and .png files<br> are supported.</b>",
+									"ms-my": "<b>Saiz yang disyorkan:</b><br> 400x400 pixels<br><b>Saiz fail maksimum:</b><br> 5MB<br><b>Hanya fail .jpg dan .png<br> yang disokong.</b>"
+								},
+								"recommendedImageDimensions": {
+									"height": 400,
+									"width": 400
+								}
+							}
+						},
+						{
+							"technicalId": "companyRegistrationNumber",
+							"id": "registrationNumber",
+							"editable": false,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Registration number (SSM)",
+								"ms-my": "Nombor Pendaftaran (SSM)"
+							}
+						},
+						{
+							"technicalId": "companyLegalId",
+							"id": "legalId",
+							"editable": false,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "SOCSO employer code no.",
+								"ms-my": "No. Kod majikan PERKESO"
+							}
+						},
+						{
+							"technicalId": "companyStartOperationDate",
+							"id": "startOperationDate",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Company start operation date",
+								"ms-my": "Tarikh operasi syarikat dimulakan"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Date",
+									"ms-my": "Tarikh"
+								}
+							}
+						},
+						{
+							"technicalId": "companySize",
+							"id": "size",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Company Size",
+								"ms-my": "Saiz syarikat"
+							}
+						},
+						{
+							"technicalId": "companySectors",
+							"id": "sector",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Sector",
+								"ms-my": "Sektor"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Select one or more sectors",
+									"ms-my": "Pilih satu atau lebih sektor"
+								}
+							}
+						},
+						{
+							"technicalId": "companyAddressLine",
+							"id": "line",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Address",
+								"ms-my": "Alamat"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Enter street address…",
+									"ms-my": "Masukkan alamat…"
+								}
+							}
+						},
+						{
+							"technicalId": "companyLocation",
+							"id": "companyLocation",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "",
+								"ms-my": ""
+							},
+							"locationSubdivisions": [
+								{
+									"subdivision": "COUNTRY",
+									"inputType": "DROPDOWN",
+									"labels": {
+										"en-us": "Country",
+										"ms-my": "Negara"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "Country",
+											"ms-my": "Negara"
+										}
+									}
+								},
+								{
+									"subdivision": "STATE",
+									"inputType": "DROPDOWN",
+									"labels": {
+										"en-us": "State",
+										"ms-my": "Negeri"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "State",
+											"ms-my": "Negeri"
+										}
+									}
+								},
+								{
+									"subdivision": "CITY",
+									"inputType": "AUTOCOMPLETE",
+									"labels": {
+										"en-us": "City",
+										"ms-my": "Bandar"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "City",
+											"ms-my": "Bandar"
+										}
+									}
+								},
+								{
+									"subdivision": "POSTAL_CODE",
+									"inputType": "AUTOCOMPLETE",
+									"labels": {
+										"en-us": "Zip/Postal Code",
+										"ms-my": "Poskod"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "Zip/Postal Code",
+											"ms-my": "Poskod"
+										}
+									}
+								}
+							]
+						},
+						{
+							"technicalId": "companyDescription",
+							"id": "description",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Company description",
+								"ms-my": "Deskripsi syarikat"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Describe your company’s goals, achievements, vision, perks…",
+									"ms-my": "Terangkan mengenai matlamat syarikat anda, pencapaian, visi, faedah-faedah…"
+								}
+							}
+						},
+						{
+							"technicalId": "companyYoutubeUrl",
+							"id": "youTubeUrl",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "YouTube",
+								"ms-my": "YouTube"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Enter the link to your YouTube company video",
+									"ms-my": "Masukkan link ke video YouTube syarikat anda"
+								}
+							}
+						},
+						{
+							"technicalId": "companyBusinessEntity",
+							"id": "businessEntity",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Business Entity",
+								"ms-my": "Entiti Perniagaan"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Please select business entity",
+									"ms-my": "Tolong pilih entiti perniagaan"
+								}
+							}
+						},
+						{
+							"technicalId": "companyBusinessType",
+							"id": "businessType",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Business Type",
+								"ms-my": "Jenis perniagaan"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Please select business type",
+									"ms-my": "Tolong pilih jenis perniagaan"
+								}
+							}
+						},
+						{
+							"technicalId": "companyWebsiteUrl",
+							"id": "websiteAddress",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Website Address",
+								"ms-my": "Alamat Laman Sesawang"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Enter the link to your company website",
+									"ms-my": "Masukkan pautan ke laman sesawang syarikat anda"
+								}
+							}
+						},
+						{
+							"technicalId": "companyHasBranches",
+							"id": "hasBranches",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Does the company have any other branches/ subsidiaries?",
+								"ms-my": "Adakah syarikat mempunyai cawangan / anak syarikat lain?"
+							}
+						},
+						{
+							"technicalId": "companyHiringWorkersWithDisabilities",
+							"id": "hiringWorkersWithDisabilities",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Is employer interested in hiring workers with disabilities?",
+								"ms-my": "Adakah majikan berminat untuk mengambil pekerja kurang upaya?"
+							}
+						},
+						{
+							"technicalId": "companyNumberOfWorkersByType",
+							"id": "numberOfWorkersByType",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Please state number of workers",
+								"ms-my": "Tolong nyatakan jumlah pekerja"
+							}
+						}
+					]
+				},
+				{
+					"sectionId": "caseworkers",
+					"visible": true,
+					"labels": {
+						"en-us": "Caseworker",
+						"ms-my": "Pegawai Kes"
+					}
+				},
+				{
+					"sectionId": "templates",
+					"visible": true,
+					"labels": {
+						"en-us": "Templates",
+						"ms-my": "Templat"
+					},
+					"fields": [
+						{
+							"technicalId": "companyInviteToApplyMessage",
+							"id": "invitation",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Invite to apply message",
+								"ms-my": "Mesej jemput untuk memohon"
+							}
+						},
+						{
+							"technicalId": "companyApplicantRejectionFeedback",
+							"id": "rejection",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Applicant rejection feedback",
+								"ms-my": "Maklum balas penolakan pemohon"
+							}
+						}
+					]
+				},
+				{
+					"sectionId": "contacts",
+					"visible": true,
+					"labels": {
+						"en-us": "Contacts",
+						"ms-my": "Pengguna"
+					},
+					"fields": [
+						{
+							"id": "companyContactList",
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "[text]",
+								"ms-my": "[text]"
+							},
+							"fields": [
+								{
+									"technicalId": "companyContactName",
+									"id": "name",
+									"editable": true,
+									"mandatory": true,
+									"visible": true,
+									"labels": {
+										"en-us": "Full name",
+										"ms-my": "Nama Penuh"
+									}
+								},
+								{
+									"technicalId": "companyContactUsername",
+									"id": "username",
+									"editable": false,
+									"mandatory": true,
+									"visible": true,
+									"labels": {
+										"en-us": "Username",
+										"ms-my": "Nama Pengguna"
+									}
+								},
+								{
+									"technicalId": "companyContactDepartment",
+									"id": "department",
+									"editable": true,
+									"mandatory": false,
+									"visible": true,
+									"labels": {
+										"en-us": "Department",
+										"ms-my": "Jabatan"
+									}
+								},
+								{
+									"technicalId": "companyContactTitle",
+									"id": "title",
+									"editable": true,
+									"mandatory": false,
+									"visible": true,
+									"labels": {
+										"en-us": "Function title",
+										"ms-my": "Jawatan"
+									}
+								},
+								{
+									"technicalId": "companyContactPhone",
+									"id": "phone",
+									"editable": true,
+									"mandatory": true,
+									"visible": true,
+									"labels": {
+										"en-us": "Telephone",
+										"ms-my": "Telefon"
+									},
+									"validation": {
+										"regEx": "^(\\+?)[\\s\\-0-9]{9,20}$",
+										"errorMessage": {
+											"en-us": "Invalid phone number, please enter a valid phone number",
+											"ms-my": "Nombor telefon tidak sah, masukkan nombor telefon yang sah"
+										},
+										"rangeValidation": {
+											"min": {
+												"rule": 9,
+												"errorMessage": {
+													"en-us": "Minimum number of characters (9) for this field has not been reached.",
+													"ms-my": "Jumlah huruf minima untuk medan ini (9) tidak dicapai."
+												}
+											},
+											"max": {
+												"rule": 20,
+												"errorMessage": {
+													"en-us": "Maximum number of characters (20) for this field has been exceeded.",
+													"ms-my": "Jumlah huruf maksima untuk medan ini (20) telah dicapai."
+												}
+											}
+										}
+									}
+								},
+								{
+									"technicalId": "companyContactEmail",
+									"id": "email",
+									"editable": true,
+									"mandatory": true,
+									"visible": true,
+									"labels": {
+										"en-us": "E-mail",
+										"ms-my": "E-mel"
+									},
+									"validation": {
+										"regEx": "^(?:[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[A-Za-z0-9-]*[A-Za-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])$",
+										"errorMessage": {
+											"en-us": "Email must be a valid email address",
+											"ms-my": "Sila pastikan alamat e-mel adalah sah"
+										}
+									}
+								},
+								{
+									"technicalId": "companyContactUserRoles",
+									"id": "userRoles",
+									"editable": true,
+									"mandatory": true,
+									"visible": true,
+									"labels": {
+										"en-us": "User access levels",
+										"ms-my": "Tahap akses pengguna"
+									}
+								},
+								{
+									"technicalId": "companyContactActive",
+									"id": "active",
+									"editable": true,
+									"mandatory": true,
+									"visible": true,
+									"labels": {
+										"en-us": "Active",
+										"ms-my": "Aktif"
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"pageId": "employerRegistration",
+			"sections": [
+				{
+					"sectionId": "company",
+					"visible": true,
+					"labels": {
+						"en-us": "Company",
+						"ms-my": "Syarikat"
+					},
+					"fields": [
+						{
+							"id": "name",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Company name",
+								"ms-my": "Nama syarikat"
+							}
+						},
+						{
+							"id": "registrationNumber",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Registration number (SSM)",
+								"ms-my": "Nombor pendaftaran (SSM)"
+							}
+						},
+						{
+							"id": "legalId",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "SOCSO employer code no.",
+								"ms-my": "No. Kod majikan PERKESO"
+							}
+						},
+						{
+							"id": "startOperationDate",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Company start operation date",
+								"ms-my": "Tarikh operasi syarikat dimulakan"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Date",
+									"ms-my": "Tarikh"
+								}
+							}
+						},
+						{
+							"id": "size",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Company size",
+								"ms-my": "Saiz syarikat"
+							}
+						},
+						{
+							"id": "sector",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Sector",
+								"ms-my": "Sektor"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Select one or more sectors",
+									"ms-my": "Pilih satu atau lebih sektor"
+								}
+							}
+						},
+						{
+							"id": "line",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Address",
+								"ms-my": "Alamat"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Enter street address…",
+									"ms-my": "Masukkan alamat…"
+								}
+							}
+						},
+						{
+							"id": "companyLocation",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "",
+								"ms-my": ""
+							},
+							"locationSubdivisions": [
+								{
+									"subdivision": "COUNTRY",
+									"inputType": "DROPDOWN",
+									"labels": {
+										"en-us": "Country",
+										"ms-my": "Negara"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "Country",
+											"ms-my": "Negara"
+										}
+									}
+								},
+								{
+									"subdivision": "STATE",
+									"inputType": "DROPDOWN",
+									"labels": {
+										"en-us": "State",
+										"ms-my": "Negeri"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "State",
+											"ms-my": "Negeri"
+										}
+									}
+								},
+								{
+									"subdivision": "CITY",
+									"inputType": "AUTOCOMPLETE",
+									"labels": {
+										"en-us": "City",
+										"ms-my": "Bandar"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "City",
+											"ms-my": "Bandar"
+										}
+									}
+								},
+								{
+									"subdivision": "POSTAL_CODE",
+									"inputType": "AUTOCOMPLETE",
+									"labels": {
+										"en-us": "Zip/Postal Code",
+										"ms-my": "Poskod"
+									},
+									"staticContents": {
+										"placeholder": {
+											"en-us": "Zip/Postal Code",
+											"ms-my": "Poskod"
+										}
+									}
+								}
+							]
+						},
+						{
+							"id": "description",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Company description",
+								"ms-my": "Deskripsi syarikat"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Describe your company’s goals, achievements, vision, perks…",
+									"ms-my": "Terangkan mengenai matlamat syarikat anda, pencapaian, visi, faedah-faedah…"
+								}
+							}
+						},
+						{
+							"id": "youTubeUrl",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "YouTube",
+								"ms-my": "YouTube"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Enter the link to your YouTube company video",
+									"ms-my": "Masukkan link ke video YouTube syarikat anda"
+								}
+							}
+						},
+						{
+							"id": "businessEntity",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Business Entity",
+								"ms-my": "Entiti Perniagaan"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Please select business entity",
+									"ms-my": "Tolong pilih entiti perniagaan"
+								}
+							}
+						},
+						{
+							"id": "businessType",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Business Type",
+								"ms-my": "Jenis perniagaan"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Please select business type",
+									"ms-my": "Tolong pilih jenis perniagaan"
+								}
+							}
+						},
+						{
+							"id": "websiteAddress",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Website Address",
+								"ms-my": "Alamat Laman Sesawang"
+							},
+							"staticContents": {
+								"placeholder": {
+									"en-us": "Enter the link to your company website",
+									"ms-my": "Masukkan pautan ke laman sesawang syarikat anda"
+								}
+							}
+						},
+						{
+							"id": "hasBranches",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Does the company have any other branches/ subsidiaries?",
+								"ms-my": "Adakah syarikat mempunyai cawangan / anak syarikat lain?"
+							}
+						},
+						{
+							"id": "hiringWorkersWithDisabilities",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Is employer interested in hiring workers with disabilities?",
+								"ms-my": "Adakah majikan berminat untuk mengambil pekerja kurang upaya?"
+							}
+						},
+						{
+							"id": "numberOfWorkersByType",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Please state number of workers",
+								"ms-my": "Tolong nyatakan jumlah pekerja"
+							}
+						}
+					]
+				},
+				{
+					"sectionId": "contact",
+					"visible": true,
+					"labels": {
+						"en-us": "Contact",
+						"ms-my": "Pengguna"
+					},
+					"fields": [
+						{
+							"id": "name",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Full name",
+								"ms-my": "Nama Penuh"
+							}
+						},
+						{
+							"id": "username",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Username",
+								"ms-my": "Nama Pengguna"
+							}
+						},
+						{
+							"id": "department",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Department",
+								"ms-my": "Jabatan"
+							}
+						},
+						{
+							"id": "title",
+							"editable": true,
+							"mandatory": false,
+							"visible": true,
+							"labels": {
+								"en-us": "Function title",
+								"ms-my": "Jawatan"
+							}
+						},
+						{
+							"id": "phone",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "Telephone",
+								"ms-my": "Telefon"
+							},
+							"validation": {
+								"regEx": "^(\\+?)[\\s\\-0-9]{9,20}$",
+								"errorMessage": {
+									"en-us": "Invalid phone number, please enter a valid phone number",
+									"ms-my": "Nombor telefon tidak sah, masukkan nombor telefon yang sah"
+								},
+								"rangeValidation": {
+									"min": {
+										"rule": 9,
+										"errorMessage": {
+											"en-us": "Minimum number of characters (9) for this field has not been reached.",
+											"ms-my": "Jumlah huruf minima untuk medan ini (9) tidak dicapai."
+										}
+									},
+									"max": {
+										"rule": 20,
+										"errorMessage": {
+											"en-us": "Maximum number of characters (20) for this field has been exceeded.",
+											"ms-my": "Jumlah huruf maksima untuk medan ini (20) telah dicapai."
+										}
+									}
+								}
+							}
+						},
+						{
+							"id": "email",
+							"editable": true,
+							"mandatory": true,
+							"visible": true,
+							"labels": {
+								"en-us": "E-mail",
+								"ms-my": "E-mel"
+							},
+							"validation": {
+								"regEx": "^(?:[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[A-Za-z0-9-]*[A-Za-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])$",
+								"errorMessage": {
+									"en-us": "Email must be a valid email address",
+									"ms-my": "Sila pastikan alamat e-mel adalah sah"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"pageId": "applicants",
+			"columns": [
+				{
+					"id": "matchScore",
+					"dataField": "$.score",
+					"labels": {
+						"en-us": "Match",
+						"ms-my": "Padanan"
+					}
+				},
+				{
+					"id": "jobseekerName",
+					"dataField": "$.profileSnapshot.person.name.fullName",
+					"labels": {
+						"en-us": "Name",
+						"ms-my": "Nama"
+					}
+				},
+				{
+					"id": "jobseekerPhone",
+					"dataField": "$.phone",
+					"labels": {
+						"en-us": "Phone",
+						"ms-my": "Nombor Telefon"
+					}
+				},
+				{
+					"id": "jobseekerEmail",
+					"dataField": "$.email",
+					"labels": {
+						"en-us": "E-mail",
+						"ms-my": "E-mel"
+					}
+				},
+				{
+					"id": "applicationDate",
+					"dataField": "$.applicationDate",
+					"dateFormat": "dd-MM-yy",
+					"labels": {
+						"en-us": "Date",
+						"ms-my": "Tarikh"
+					}
+				}
+			]
+		},
+		{
+			"pageId": "matchedApplicants",
+			"facets": [
+				{
+					"id": "STATE",
+					"labels": {
+						"en-us": "State",
+						"ms-my": "Negeri"
+					},
+					"taxonomyId": "location",
+					"taxonomyLevel": "2"
+				},
+				{
+					"id": "CITY",
+					"labels": {
+						"en-us": "City",
+						"ms-my": "Bandar"
+					},
+					"taxonomyId": "location",
+					"taxonomyLevel": "3"
+				},
+				{
+					"id": "EDUCATION_LEVEL",
+					"labels": {
+						"en-us": "Education level",
+						"ms-my": "Akademik"
+					},
+					"taxonomyId": "education_level"
+				}
+			]
+		},
+		{
+			"pageId": "vacancyDetails",
+			"sections": [
+				{
+					"sectionId": "vacancyDetailsHeader",
+					"fields": [
+						{
+							"id": "location",
+							"dataField": "$.location",
+							"taxonomy": "location",
+							"dataTemplate": "{CITY}"
+						}
+					]
+				},
+				{
+					"sectionId": "vacancyDetailsPrimaryPanel",
+					"fields": [
+						{
+							"id": "datePosted",
+							"dataField": "$.datePosted",
+							"valueType": "Date",
+							"labels": {
+								"en-us": "Date posted:",
+								"ms-my": "Tarikh diiklankan:"
+							}
+						},
+						{
+							"id": "expiration",
+							"dataField": "$.expiration",
+							"format": "d MMM y",
+							"valueType": "Date",
+							"labels": {
+								"en-us": "Open until:",
+								"ms-my": "Dibuka sehingga:"
+							}
+						},
+						{
+							"id": "numberOfApplications",
+							"dataField": "$.statistics.numberOfApplications",
+							"valueType": "Number",
+							"labels": {
+								"en-us": "Applied:",
+								"ms-my": "Permohonan diterima:"
+							}
+						},
+						{
+							"id": "openPositionCount",
+							"dataField": "$.openPositionCount",
+							"valueType": "Number",
+							"labels": {
+								"en-us": "Positions:",
+								"ms-my": "Kekosongan Jawatan:"
+							}
+						},
+						{
+							"id": "actualWages",
+							"dataField": "$.actualWages",
+							"labels": {
+								"en-us": "Actual Salary:",
+								"ms-my": "Gaji sebenar:"
+							},
+							"valueType": "Currency",
+							"condition": {
+								"!=": [
+									{
+										"var": "foreignExpatriateApplication"
+									},
+									null
+								]
+							}
+						}
+					]
+				},
+				{
+					"sectionId": "vacancyDetailsSecondaryPanel",
+					"fields": [
+						{
+							"id": "contractType",
+							"dataField": "$.contractType",
+							"valueType": "Taxonomy",
+							"taxonomy": "contract_type"
+						},
+						{
+							"id": "offeredRemunerationPackages",
+							"dataField": "$.offeredRemunerationPackages",
+							"valueType": "Taxonomy",
+							"taxonomy": "salary_range"
+						},
+						{
+							"id": "negotiableSalary",
+							"dataField": "$.negotiableSalary",
+							"valueType": "Boolean",
+							"valueMap": {
+								"true": {
+									"en-us": "Salary negotiable",
+									"ms-my": "Gaji boleh dirunding"
+								}
+							}
+						},
+						{
+							"id": "hoursPerWeek",
+							"dataField": "$.hoursPerWeek",
+							"valueType": "Taxonomy",
+							"taxonomy": "work_hours"
+						},
+						{
+							"id": "educationDegree",
+							"dataField": "$.educationDegree",
+							"valueType": "Taxonomy",
+							"taxonomy": "education_level"
+						},
+						{
+							"id": "vacancySectors",
+							"dataField": "$.vacancySectors",
+							"valueType": "Taxonomy",
+							"taxonomy": "industry",
+							"truncated": true
+						}
+					]
+				},
+				{
+					"sectionId": "vacancyDetailsCompanyInformation",
+					"fields": [
+						{
+							"id": "companySectors",
+							"dataField": "$.companySectors[*].id",
+							"valueType": "List",
+							"taxonomy": "industry",
+							"truncated": false
+						},
+						{
+							"id": "companySize",
+							"dataField": "$.companySize",
+							"valueType": "String",
+							"taxonomy": "company_size",
+							"truncated": false
+						},
+						{
+							"id": "companyLocation",
+							"dataField": "$.location",
+							"valueType": "Location",
+							"taxonomy": "location",
+							"dataTemplate": "{STATE} - {CITY} - {POSTAL_CODE}"
+						},
+						{
+							"id": "companyDescription",
+							"dataField": "$.companyDescription",
+							"valueType": "String",
+							"truncated": false
+						},
+						{
+							"id": "companyYouTubeUrl",
+							"dataField": "$.companyYouTubeUrl",
+							"valueType": "YoutubeUrl"
+						},
+						{
+							"id": "companyGeoLocation",
+							"dataField": "$.geoLocation",
+							"valueType": "GeoLocation"
+						}
+					]
+				}
+			]
+		}
+	],
+	"navbar": {
+		"navbarLinkItems": [
+			{
+				"id": "myVacancies",
+				"isHomePage": true
+			},
+			{
+				"id": "myCompany"
+			}
+		],
+		"navbarPinnedItems": [
+			{
+				"id": "language"
+			},
+			{
+				"id": "notificationBell"
+			}
+		],
+		"navbarUserItems": [
+			{
+				"id": "notificationSettings"
+			},
+			{
+				"id": "signOut"
+			}
+		]
+	},
+	"properties": {
+		"prefix": "${",
+		"suffix": "}",
+		"values": {
+		}
+	}
+}

@@ -48,16 +48,19 @@ def translate_to_fijian(text, retries=3):
     print(f"Skipping translation for text: {text} after {retries} attempts.")
     return None
 
-def update_json_file_for_fijian(input_file):
+def update_json_file_for_fijian(input_file, output_folder):
     # Load the JSON file
     try:
-        with open(input_file, 'r', encoding='utf-8') as file):
+        with open(input_file, 'r', encoding='utf-8') as file:
             data = json.load(file)
     except Exception as e:
         print(f"Error loading JSON file: {e}")
         return
 
     translations_done = 0
+
+    # Ensure the output folder exists
+    os.makedirs(output_folder, exist_ok=True)
 
     # Recursively scan through the dictionary to find "en-us"
     def scan_and_translate(obj):
@@ -70,7 +73,7 @@ def update_json_file_for_fijian(input_file):
 
                 if fijian_text:
                     # Insert the Fijian translation
-                    obj['fj'] = fijian_text
+                    obj['fj-fj'] = fijian_text
                     translations_done += 1
                     print(f"Inserted Fijian translation: {fijian_text}")
                 else:
@@ -88,8 +91,10 @@ def update_json_file_for_fijian(input_file):
     if translations_done == 0:
         print("No translations were inserted. Check if 'en-us' fields are present in the JSON file.")
 
-    # Save the updated JSON file with '-fijian-updated' appended to the filename
-    updated_file_name = os.path.splitext(input_file)[0] + '-fj.json'
+    # Save the updated JSON file with '-fj' appended to the filename
+    base_filename = os.path.splitext(os.path.basename(input_file))[0]
+    updated_file_name = os.path.join(output_folder, base_filename + '-fj.json')
+
     try:
         with open(updated_file_name, 'w', encoding='utf-8') as updated_file:
             json.dump(data, updated_file, ensure_ascii=False, indent=4)
@@ -99,6 +104,7 @@ def update_json_file_for_fijian(input_file):
 
     print(f"Total Fijian translations inserted: {translations_done}")
 
-# Specify the path to your JSON file
-json_file = 'language_source_files\generic-popups-configuration-id-fil.json'
-update_json_file_for_fijian(json_file)
+# Example usage:
+json_file = 'translated_files\generic-popups-configuration-id-fil.json'
+output_folder = 'translated_files'
+update_json_file_for_fijian(json_file, output_folder)

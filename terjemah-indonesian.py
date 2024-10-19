@@ -10,7 +10,7 @@ location = 'southeastasia'  # Use your region if needed
 
 def translate_to_indonesian(text, retries=3):
     """
-    Translate the given text to Indonesian using Microsoft Translator API.
+    Translate the given text from English to Indonesian using Microsoft Translator API.
     """
     path = '/translate?api-version=3.0'
     params = '&from=en&to=id'
@@ -27,12 +27,12 @@ def translate_to_indonesian(text, retries=3):
     attempt = 0
     while attempt < retries:
         try:
-            print(f"Translating English text: {text}")
+            print(f"Translating English text to Indonesian: {text}")
             response = requests.post(constructed_url, headers=headers, json=body)
             response.raise_for_status()
             result = response.json()
 
-            # Get the translated text from the response
+            # Get the Indonesian translation from the response
             indonesian_translation = result[0]['translations'][0]['text']
             return indonesian_translation
 
@@ -48,7 +48,7 @@ def translate_to_indonesian(text, retries=3):
     print(f"Skipping translation for text: {text} after {retries} attempts.")
     return None
 
-def update_json_file(input_file):
+def update_json_file_for_indonesian(input_file, output_folder):
     # Load the JSON file
     try:
         with open(input_file, 'r', encoding='utf-8') as file:
@@ -59,22 +59,25 @@ def update_json_file(input_file):
 
     translations_done = 0
 
-    # Recursively scan through the dictionary to find "en-us" and "ms-my"
+    # Ensure the output folder exists
+    os.makedirs(output_folder, exist_ok=True)
+
+    # Recursively scan through the dictionary to find "en-us"
     def scan_and_translate(obj):
         nonlocal translations_done
         if isinstance(obj, dict):
-            if 'en-us' in obj and 'ms-my' in obj:
+            if 'en-us' in obj:
                 # English translation exists, translate to Indonesian
-                en_text = obj['en-us']
-                indonesian_text = translate_to_indonesian(en_text)
+                english_text = obj['en-us']
+                indonesian_text = translate_to_indonesian(english_text)
 
                 if indonesian_text:
-                    # Insert the Indonesian translation after "ms-my"
+                    # Insert the Indonesian translation
                     obj['id-id'] = indonesian_text
                     translations_done += 1
                     print(f"Inserted Indonesian translation: {indonesian_text}")
                 else:
-                    print(f"Failed to translate English text: {en_text}")
+                    print(f"Failed to translate English text: {english_text}")
             # Recursively scan any nested dictionaries
             for key, value in obj.items():
                 scan_and_translate(value)
@@ -86,10 +89,12 @@ def update_json_file(input_file):
     scan_and_translate(data)
 
     if translations_done == 0:
-        print("No translations were inserted. Check if 'ms-my' and 'en-us' fields are present in the JSON file.")
+        print("No translations were inserted. Check if 'en-us' fields are present in the JSON file.")
 
-    # Save the updated JSON file with '-updated' appended to the filename
-    updated_file_name = os.path.splitext(input_file)[0] + '-id.json'
+    # Save the updated JSON file with '-id' appended to the filename
+    base_filename = os.path.splitext(os.path.basename(input_file))[0]
+    updated_file_name = os.path.join(output_folder, base_filename + '-id.json')
+
     try:
         with open(updated_file_name, 'w', encoding='utf-8') as updated_file:
             json.dump(data, updated_file, ensure_ascii=False, indent=4)
@@ -99,6 +104,7 @@ def update_json_file(input_file):
 
     print(f"Total Indonesian translations inserted: {translations_done}")
 
-# Specify the path to your JSON file
-json_file = 'language_source_files\generic-popups-configuration.json'
-update_json_file(json_file)
+# Example usage:
+json_file = 'language_files\generic-popups-configuration.json'
+output_folder = 'translated_files'
+update_json_file_for_indonesian(json_file, output_folder)

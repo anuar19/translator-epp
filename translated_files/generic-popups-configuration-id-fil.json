@@ -1,0 +1,165 @@
+{
+    "exportApplicants": {
+        "title": {
+            "en-us": "Download applicants data",
+            "ms-my": "Muat turun data pemohon",
+            "id-id": "Unduh data pelamar",
+            "fil-ph": "I-download ang data ng mga aplikante"
+        },
+        "information": {
+            "informationText": {
+                "en-us": "You are about to export personal information of vacancy applicants. The use of this data is subject to the conditions laid out in the {privacyPolicy}. To proceed with the export you must agree to these conditions.",
+                "ms-my": "Anda akan memuat turun maklumat peribadi pemohon. Penggunaan data ini tertakluk kepada syarat yang ditetapkan dalam {privacyPolicy}. Untuk meneruskan muat turun anda mesti bersetuju dengan syarat ini",
+                "id-id": "Anda akan mengekspor informasi pribadi pelamar lowongan. Penggunaan data ini tunduk pada ketentuan yang ditetapkan dalam {privacyPolicy}. Untuk melanjutkan ekspor, Anda harus menyetujui ketentuan ini.",
+                "fil-ph": "Malapit ka nang mag export ng personal na impormasyon ng mga aplikante ng bakanteng pwesto. Ang paggamit ng datos na ito ay napapailalim sa mga kondisyong inilatag sa {privacyPolicy}. Upang magpatuloy sa pag export kailangan mong sumang ayon sa mga kondisyong ito."
+            },
+            "links": {
+                "privacyPolicy": {
+                    "en-us": {
+                        "url": "/assets/theme/pdf/PrivacyPolicy.pdf",
+                        "linkText": "Privacy Policy"
+                    },
+                    "ms-my": {
+                        "url": "/assets/theme/pdf/PrivacyPolicy.pdf",
+                        "linkText": "Dasar Privasi"
+                    }
+                }
+            }
+        },
+        "popupButtons": {
+            "popupButtonsType": "SubmitCancel",
+            "popupButtonsAlignment": "center",
+            "confirmButtonLabels": {
+                "en-us": "Yes, export",
+                "ms-my": "Ya, muat turun",
+                "id-id": "Ya, ekspor",
+                "fil-ph": "Oo, export"
+            },
+            "cancelButtonLabels": {
+                "en-us": "Cancel",
+                "ms-my": "Batal",
+                "id-id": "Membatalkan",
+                "fil-ph": "Kanselahin"
+            }
+        },
+        "fields": [
+            {
+                "id": "privacyPolicyCheckbox",
+                "editable": true,
+                "visible": true,
+                "mandatory": true,
+                "valueType": "Checkbox",
+                "labels": {
+                    "en-us": "I have read and agree to the privacy policy",
+                    "ms-my": "Saya telah membaca dan bersetuju menerima dasar privasi",
+                    "id-id": "Saya telah membaca dan menyetujui kebijakan privasi",
+                    "fil-ph": "Nabasa ko at sumasang ayon sa patakaran sa privacy"
+                }
+            },
+            {
+                "id": "numberOfApplicants",
+                "editable": true,
+                "visible": true,
+                "mandatory": true,
+                "valueType": "Number",
+                "defaultValue": 10,
+                "labels": {
+                    "en-us": "Number of applicants to export",
+                    "ms-my": "Jumlah pemohon untuk dimuat turun",
+                    "id-id": "Jumlah pelamar yang akan diekspor",
+                    "fil-ph": "Bilang ng mga aplikante na mag e export"
+                }
+            }
+        ]
+    },
+    "newCaseNote": {
+        "popupButtons": {
+            "confirmButtonLabels": {
+                "en-us": "Save",
+                "ms-my": "Simpan",
+                "id-id": "Simpan",
+                "fil-ph": "Mag-ipon"
+            },
+            "cancelButtonLabels": {
+                "en-us": "Cancel",
+                "ms-my": "Batal",
+                "id-id": "Membatalkan",
+                "fil-ph": "Kanselahin"
+            }
+        },
+        "fields": [
+            {
+                "id": "noteType",
+                "labels": {
+                    "en-us": "Note Type",
+                    "ms-my": "Jenis Nota",
+                    "id-id": "Jenis Catatan",
+                    "fil-ph": "Uri ng Tala"
+                },
+                "staticContents": {
+                    "placeholder": {
+                        "en-us": "Select type",
+                        "ms-my": "Pilih jenis",
+                        "id-id": "Pilih jenis",
+                        "fil-ph": "Pumili ng uri"
+                    }
+                },
+                "options": {
+                    "BENEFIT": {
+                        "en-us": "Benefit",
+                        "ms-my": "Faedah",
+                        "id-id": "Manfaat",
+                        "fil-ph": "Benepisyo"
+                    },
+                    "DISABILITY_MANAGEMENT": {
+                        "en-us": "Disability management",
+                        "ms-my": "Pengurusan ketidakupayaan",
+                        "id-id": "Manajemen disabilitas",
+                        "fil-ph": "Pamamahala ng kapansanan"
+                    },
+                    "EMPLOYER": {
+                        "en-us": "Employer",
+                        "ms-my": "Majikan",
+                        "id-id": "Majikan",
+                        "fil-ph": "Employer"
+                    },
+                    "INSURED_PERSON": {
+                        "en-us": "Insured person",
+                        "ms-my": "Orang berinsurans",
+                        "id-id": "Tertanggung",
+                        "fil-ph": "Nakaseguro na tao"
+                    },
+                    "OTHERS": {
+                        "en-us": "Others",
+                        "ms-my": "Lain-lain",
+                        "id-id": "Lain",
+                        "fil-ph": "Ang iba naman"
+                    }
+                }
+            },
+            {
+                "id": "noteContent",
+                "labels": {
+                    "en-us": "Note",
+                    "ms-my": "Nota",
+                    "id-id": "Nota",
+                    "fil-ph": "Tala"
+                },
+                "staticContents": {
+                    "placeholder": {
+                        "en-us": "Enter your note",
+                        "ms-my": "Masukkan nota anda",
+                        "id-id": "Masukkan catatan Anda",
+                        "fil-ph": "Ipasok ang iyong tala"
+                    },
+                    "disclaimer": {
+                        "en-us": "**This information is strictly confidential and intended only for the use of the recipient/person to which it is addressed and may contain confidential and/or sensitive personal data. Any review, retransmission, dissemination or other use of, or taking of any action in reliance upon this information by persons or entities other than the intended recipient is prohibited.",
+                        "ms-my": "**Maklumat ini adalah sulit dan bertujuan hanya untuk kegunaan penerima/orang yang dialamatkan dan mungkin mengandungi data peribadi sulit dan/atau sensitif. Sebarang semakan, penghantaran semula, penyebaran atau penggunaan lain, atau mengambil sebarang tindakan yang bergantung kepada maklumat ini oleh orang atau entiti selain daripada penerima yang dimaksudkan adalah dilarang.",
+                        "id-id": "**Informasi ini sangat rahasia dan ditujukan hanya untuk penggunaan penerima/orang yang ditujuinya dan mungkin berisi data pribadi rahasia dan/atau sensitif. Setiap tinjauan, transmisi ulang, penyebaran atau penggunaan lain dari, atau mengambil tindakan apa pun yang bergantung pada informasi ini oleh orang atau entitas selain penerima yang dituju dilarang.",
+                        "fil-ph": "**Ang impormasyong ito ay mahigpit na kumpidensyal at inilaan lamang para sa paggamit ng tatanggap/taong tinutukoy nito at maaaring naglalaman ng kumpidensyal at/o sensitibong personal na data. Anumang pagsusuri, muling paghahatid, pagpapalaganap o iba pang paggamit ng, o paggawa ng anumang aksyon sa pag asa sa impormasyong ito ng mga tao o entidad maliban sa nilalayong tatanggap ay ipinagbabawal."
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -70,7 +70,7 @@ def update_json_file_for_khmer(input_file):
 
                 if khmer_text:
                     # Insert the Khmer translation
-                    obj['km'] = khmer_text
+                    obj['km-kh'] = khmer_text
                     translations_done += 1
                     print(f"Inserted Khmer translation: {khmer_text}")
                 else:
@@ -100,5 +100,5 @@ def update_json_file_for_khmer(input_file):
     print(f"Total Khmer translations inserted: {translations_done}")
 
 # Specify the path to your JSON file
-json_file = 'language_source_files\generic-popups-configuration-id-fil-fj.json'
+json_file = 'language_files\generic-popups-configuration-id-fil-fj.json'
 update_json_file_for_khmer(json_file)
